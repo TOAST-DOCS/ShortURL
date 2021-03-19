@@ -41,7 +41,9 @@
 
 ### 인증서 파일 형식
 - `.pem` 형식의 인증서 파일만 지원합니다.
+- [passphrase](#passphrase-삭제)가 삭제된 인증서만 추가 가능합니다.
 - 파일에는 인증서 (체인) 정보와 개인 키 정보가 포함되어 있습니다.
+
 ```
 -----BEGIN CERTIFICATE-----
 ...
@@ -49,6 +51,12 @@
 -----BEGIN RSA PRIVATE KEY-----
 ...
 -----END RSA PRIVATE KEY-----
+```
+
+### passphrase 삭제
+- passphrase는 다음 명령을 사용해 삭제할 수 있습니다.
+```bash
+openssl rsa -in input.key -out output.key
 ```
 
 ### 인증서 파일(.pem) 생성 방법
@@ -62,12 +70,6 @@ cat crt.pem(서버인증서) key.pem(개인키) ca-chain.pem(루트/체인) > re
 - cat 명령어를 이용하여 result.pem 1개 파일로 단순 통합하는 예제입니다.
 - 통합된 result.pem 파일을 텍스트 편집기로 열어, PEM 내용간 구분되어 있는지 꼭 확인해야 합니다.
 - 루트/체인 인증서는 차이가 있을수 있습니다.
-
-### 패스프레이즈(passphrase, 비밀 문구) 삭제
-- 패스프레이즈(passphrase, 비밀문구)는 다음 명령을 사용해 삭제할 수 있습니다.
-```bash
-openssl rsa -in my_private_input.key -out my_private_output.key
-```
 
 
 ### 인증서 추가
