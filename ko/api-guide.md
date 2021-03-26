@@ -32,8 +32,8 @@ Content-Type: application/json
 | campaigns | List<String> | X | 소속될 캠페인 ID 목록 |
 ```json
 {
-   "url": "https://cloud.nhn.com",
-   "domain": "nhn.com",
+   "url": "https://nhn.com",
+   "domain": "nh,nu",
    "campaigns": [0,1],
    "backHalf": "example"
 }
