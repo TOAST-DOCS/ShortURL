@@ -7,7 +7,7 @@ API Endpoint: https://api-shortly.cloud.toast.com
 
 ## 단축 URL
 
-### 생성
+### 1. 생성
 - 단축 URL을 생성합니다.
 
 [URL]
@@ -70,7 +70,7 @@ Content-Type: application/json
 | body.pk.startAt | String | 단축 URL 사용 시작 날짜 |
 | body.pk.endAt | String | 단축 URL 사용 종료 날짜 |
 
-### 검색
+### 2. 검색
 - 단축 URL을 검색합니다.
 
 [URL]
@@ -122,7 +122,7 @@ Content-Type: application/json
 
 
 
-### QR 코드 검색
+### 3. QR 코드 검색
 - 단축 URL을 생성합니다.
 
 [URL]
