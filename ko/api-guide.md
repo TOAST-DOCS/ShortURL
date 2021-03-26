@@ -1,7 +1,7 @@
 ## Management > Service Monitoring > API 가이드
 
 ### 기본 정보
-```
+```http
 API Endpoint: https://api-shortly.cloud.toast.com
 ```
 
@@ -63,12 +63,12 @@ Content-Type: application/json
 | header.isSuccessful | Boolean | 성공 여부 |
 | header.resultCode | Integer | 결과 코드 |
 | header.resultMessage | String | 실패 메시지 |
-| body.pk.shortUrl | String | 단축된 URL |
-| body.pk.originUrl | String | 원본 URL |
-| body.pk.status | String | 단축 URL 상태 |
-| body.pk.backHalfType | String | 단축 URL 생성 방식 |
-| body.pk.startAt | String | 단축 URL 사용 시작 날짜 |
-| body.pk.endAt | String | 단축 URL 사용 종료 날짜 |
+| body.shortUrl | String | 단축된 URL |
+| body.originUrl | String | 원본 URL |
+| body.status | String | 단축 URL 상태 |
+| body.backHalfType | String | 단축 URL 생성 방식 |
+| body.startAt | String | 단축 URL 사용 시작 날짜 |
+| body.endAt | String | 단축 URL 사용 종료 날짜 |
 
 ### 2. 검색
 - 단축 URL을 검색합니다.
@@ -113,12 +113,12 @@ Content-Type: application/json
 | header.isSuccessful | Boolean | 성공 여부 |
 | header.resultCode | Integer | 결과 코드 |
 | header.resultMessage | String | 실패 메시지 |
-| body.pk.shortUrl | String | 단축된 URL |
-| body.pk.originUrl | String | 원본 URL |
-| body.pk.status | String | 단축 URL 상태 |
-| body.pk.backHalfType | String | 단축 URL 생성 방식 |
-| body.pk.startAt | String | 단축 URL 사용 시작 날짜 |
-| body.pk.endAt | String | 단축 URL 사용 종료 날짜 |
+| body.shortUrl | String | 단축된 URL |
+| body.originUrl | String | 원본 URL |
+| body.status | String | 단축 URL 상태 |
+| body.backHalfType | String | 단축 URL 생성 방식 |
+| body.startAt | String | 단축 URL 사용 시작 날짜 |
+| body.endAt | String | 단축 URL 사용 종료 날짜 |
 
 
 
