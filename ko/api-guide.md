@@ -21,8 +21,15 @@ Content-Type: application/json
 [Path Variables]
 | 값 |	타입 | 필수 여부 | 설명 |
 |---|---|---|---|
-| appKey | String | Required | 서비스 Appkey(**서비스 관리** 탭에서 확인 가능) |
+| appKey | String | O | 서비스 Appkey(**서비스 관리** 탭에서 확인 가능) |
 
+[Request Body]
+| 값 |	타입 | 필수 여부 | 설명 |
+|---|---|---|---|
+| url | String | O | 원본 URL |
+| domain | String | X | 단축 URL에 사용할 도메인 (없을 경우 nh.nu로 생성) |
+| backHalf | String | X | 단축 URL ID (https://nh.nu/example 에서 `example`을 가리키며 없을 경우 랜덤 생성)|
+| campaigns | List<String> | X | 소속될 캠페인 ID 목록 |
 ```json
 {
    "url": "https://cloud.nhn.com",
@@ -31,14 +38,6 @@ Content-Type: application/json
    "backHalf": "example"
 }
 ```
-
-[Request Body]
-| 값 |	타입 | 필수 여부 | 설명 |
-|---|---|---|---|
-| url | String | Required | 원본 URL |
-| domain | String | X | 단축 URL에 사용할 도메인 (없을 경우 nh.nu로 생성) |
-| backHalf | String | X | 단축 URL ID (https://nh.nu/example 에서 `example`을 가리키며 없을 경우 랜덤 생성)|
-| campaigns | List<String> | X | 소속될 캠페인 ID 목록 |
 
 #### 응답
 ```json
