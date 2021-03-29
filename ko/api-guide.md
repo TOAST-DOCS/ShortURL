@@ -1,4 +1,4 @@
-## Management > Service Monitoring > API 가이드
+## Application Service > ShortURL > API 가이드
 
 ### 기본 정보
 ```http
