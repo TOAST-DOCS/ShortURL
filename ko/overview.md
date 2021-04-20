@@ -1,6 +1,6 @@
 ## Application Service > ShortURL > 개요
 
-ShortURL은 글쓰기에 제한이 있는 다양한 환경에서 적은 글자수로 웹 페이지 링크를 공유할 수 있습니다.
+ShortURL을 사용하면 글쓰기에 제한이 있는 다양한 환경에서 적은 글자 수로 웹 페이지 링크를 공유할 수 있습니다.
 손쉬운 연동을 위한 RESTful API를 제공합니다.
 
 
