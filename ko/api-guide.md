@@ -2,7 +2,7 @@
 
 ### 기본 정보
 ```http
-API Endpoint: https://api-shortly.cloud.toast.com
+API Endpoint: https://api-shorturl.cloud.toast.com
 ```
 
 ## 단축 URL
@@ -38,7 +38,7 @@ Content-Type: application/json
 {
    "url": "https://nhn.com",
    "domain": "nh,nu",
-   "campaigns": [0,1],
+   "campaigns": [1,2],
    "backHalf": "example"
 }
 ```
