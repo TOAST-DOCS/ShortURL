@@ -2,7 +2,7 @@
 
 ### 基本情報
 ```http
-API Endpoint: https://api-shortly.cloud.toast.com
+API Endpoint: https://api-shorturl.cloud.toast.com
 ```
 
 ## 短縮URL
@@ -21,7 +21,7 @@ Content-Type: application/json
 [Path Variables]
 | 値 |	タイプ | 必須かどうか | 説明 |
 |---|---|---|---|
-| appKey | String | O | サービスAppkey(**サービス管理**タブで確認可能) |
+| appkey | String | O | サービスAppkey(**サービス管理**タブで確認可能) |
 
 [Request Body]
 | 値 |	タイプ | 必須かどうか | 説明 |
@@ -84,7 +84,7 @@ Content-Type: application/json
 [Path Variables]
 | 値 |	タイプ | 必須かどうか | 説明 |
 |---|---|---|---|
-| appKey | String | O | サービスAppkey(**サービス管理**タブで確認可能) |
+| appkey | String | O | サービスAppkey(**サービス管理**タブで確認可能) |
 | domain | String | O | ドメイン名 |
 | backHalf | String | O | 短縮URL path ID |
 
@@ -136,7 +136,7 @@ Content-Type: image/png
 [Path Variables]
 | 値 |	タイプ | 必須かどうか | 説明 |
 |---|---|---|---|
-| appKey | String | O | サービスAppkey(**サービス管理**タブで確認可能) |
+| appkey | String | O | サービスAppkey(**サービス管理**タブで確認可能) |
 | domain | String | O | ドメイン名 |
 | backHalf | String | O | 短縮URL path ID |
 
