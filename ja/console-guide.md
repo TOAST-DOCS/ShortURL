@@ -82,7 +82,7 @@ openssl rsa -in input.key -out output.key
 2. 証明書チェーンと秘密鍵を含む単一の`.pem`ファイルを作成します。
 
 ```bash
-cat crt.pem(サーバー証明書) key.pem(秘密鍵) ca-chain.pem(ルート/チェーン) > result.pem
+cat mydomain.crt(サーバー証明書) mydomain.key(秘密鍵) root-ca-chain.pem(ルート/チェーン) > result.pem
 ```
 
 - `cat`コマンドを利用してresult.pem 1個のファイルに統合する例です。
