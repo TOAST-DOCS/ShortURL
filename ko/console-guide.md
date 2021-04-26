@@ -85,7 +85,7 @@ openssl rsa -in input.key -out output.key
 2. 인증서 체인과 개인 키를 포함하는 단일 **.pem** 파일을 생성합니다.
 
 ```bash
-cat crt.pem(서버인증서) key.pem(개인키) ca-chain.pem(루트/체인) > result.pem
+cat mydomain.crt(서버인증서) mydomain.key(개인키) root-ca-chain.pem(루트/체인) > result.pem
 ```
 
 - **cat** 명령어를 이용하여 result.pem 1개 파일로 단순 통합하는 예제입니다.

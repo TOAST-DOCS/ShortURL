@@ -2,7 +2,7 @@
 
 ### 기본 정보
 ```http
-API Endpoint: https://api-shortly.cloud.toast.com
+API Endpoint: https://api-shorturl.cloud.toast.com
 ```
 
 ## 단축 URL
@@ -13,7 +13,7 @@ API Endpoint: https://api-shortly.cloud.toast.com
 [URL]
 
 ```http
-POST /open-api/v1.0/appkeys/{appkey}/urls
+POST /open-api/v1.0/appkeys/{appKey}/urls
 Content-Type: application/json
 ```
 
@@ -38,7 +38,7 @@ Content-Type: application/json
 {
    "url": "https://nhn.com",
    "domain": "nh,nu",
-   "campaigns": [0,1],
+   "campaigns": [1,2],
    "backHalf": "example"
 }
 ```
@@ -56,8 +56,8 @@ Content-Type: application/json
         "originUrl": "https://nhn.com",
         "status": "ACTIVE",
         "backHalfType": "AUTO",
-        "startAt": "2021-03-26T03:35+0000",
-        "endAt": "9999-12-31T00:00+0000"
+        "startDateTime": "2021-03-26T03:35+0000",
+        "endDateTime": "9999-12-31T00:00+0000"
     }
 }
 ```
@@ -71,8 +71,8 @@ Content-Type: application/json
 | body.originUrl | String | 원본 URL |
 | body.status | String | 단축 URL 상태 |
 | body.backHalfType | String | 단축 URL 생성 방식 |
-| body.startAt | String | 단축 URL 사용 시작 날짜 |
-| body.endAt | String | 단축 URL 사용 종료 날짜 |
+| body.startDateTime | String | 단축 URL 사용 시작 일시 |
+| body.endDateTime | String | 단축 URL 사용 종료 일시 |
 
 ### 2. 검색
 - 단축 URL을 검색합니다.
@@ -80,8 +80,7 @@ Content-Type: application/json
 [URL]
 
 ```http
-POST /open-api/v1.0/appkeys/{appkey}/domains/{domain}/urls/{backHalf}
-Content-Type: application/json
+GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}
 ```
 
 #### 요청
@@ -108,8 +107,8 @@ Content-Type: application/json
         "originUrl": "https://nhn.com",
         "status": "ACTIVE",
         "backHalfType": "AUTO",
-        "startAt": "2021-03-26T03:35+0000",
-        "endAt": "9999-12-31T00:00+0000"
+        "startDateTime": "2021-03-26T03:35+0000",
+        "endDateTime": "9999-12-31T00:00+0000"
     }
 }
 ```
@@ -123,19 +122,18 @@ Content-Type: application/json
 | body.originUrl | String | 원본 URL |
 | body.status | String | 단축 URL 상태 |
 | body.backHalfType | String | 단축 URL 생성 방식 |
-| body.startAt | String | 단축 URL 사용 시작 날짜 |
-| body.endAt | String | 단축 URL 사용 종료 날짜 |
+| body.startDateTime | String | 단축 URL 사용 시작 일시 |
+| body.endDateTime | String | 단축 URL 사용 종료 일시 |
 
 
 
 ### 3. QR 코드 검색
-- 단축 URL을 생성합니다.
+- 단축 URL의 QR코드를 검색합니다.
 
 [URL]
 
 ```http
-POST /domains/{domain}/urls/{backHalf}/qrcode
-Content-Type: image/png
+GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}/qrcode
 ```
 
 #### 요청
