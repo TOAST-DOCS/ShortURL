@@ -2,18 +2,18 @@
 
 ## URL
 
-###Shortened URL added
--In **View > URL** tab, click the **Add URL** button to add a new shortened URL.
+### Shortened URL added
+- In **View > URL** tab, click the **Add URL** button to add a new shortened URL.
 - Select a full URL and domain to add a new shortened URL.
 - To create a URL you want, select **URL Type > Manually Enter** and enter the URL you want.
 - **Opening Date** and **Expiry Date** indicates the period during which users can access through the added URL, which is useful when you want to prohibit user access after a specific date and time.
 
 ### View shortened URL
 - In **View > URL** tab, you can check the added URL information.
-- Enter 'Domain`, `Status`, and `Search Term` to search for a URL.
+- Enter **Domain**, **Status**, and **Search Term** to search for a URL.
 - Click **Copy** button to easily copy the link.
 - Click the **Disable** button to block the access to the shortened URL currently in use at any time.
-- *Click the **Delete** button to delete a shortened URL no longer used.
+- Click the **Delete** button to delete a shortened URL no longer used.
 
 
 
@@ -23,12 +23,12 @@
 - In **View > Campaign** tab, click the **Add Campaign** button to add a new campaign.
 - **Campaign** is an event group that can include a multiple number of shortened URLs.
 - Add a URL you want in **Affiliated URL** to manage it.
-- Click the **Edit** button to add or delete `Affiliated URL`.
+- Click the **Edit** button to add or delete **Affiliated URL**.
 - Click the **More** button to see the list of the shortened URLs included in the campaign.
 
 ### View campaign
-- In **View > Campaign** tab, you can check the `Campaign` information.
-- Enter 'Domain`, `Status`, and `Search Term` to search for a campaign.
+- In **View > Campaign** tab, you can check the **Campaign** information.
+- Enter **Domain**, **Status**, and **Search Term** to search for a campaign.
 
 
 ## Domain
@@ -81,14 +81,14 @@ openssl rsa -in input.key -out output.key
 ```
 
 ### How to create a certificate file (.pem)
-1. Convert the certificate information into `.pem` format.
-2. Create a single `.pem` file that includes a certificate chain and a private key.
+1. Convert the certificate information into **.pem** format.
+2. Create a single **.pem** file that includes a certificate chain and a private key.
 
 ```bash
 cat mydomain.crt mydomain.key root-ca-chain.pem > mydomain.pem
 ```
 
-- This is an example of simply integrating them into a single result.pem file using the - `cat` command result.pem.
+- This is an example of simply integrating them into a single result.pem file using the - **cat** command result.pem.
 - Make sure to open the integrated result.pem file with a text editor and check the different pieces of PEM information are all separated.
 - Root/chain certificate could be a little different.
 
