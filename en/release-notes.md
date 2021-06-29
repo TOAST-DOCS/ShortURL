@@ -1,6 +1,6 @@
 ## Application Service > ShortURL > Release Notes
 
-### 2021. 06. 22.
+### 2021. 06. 29.
 
 #### Feature Updates
 * When registering a certificate for an already existing domain, the name of the project with the registered certificate will be provided.
