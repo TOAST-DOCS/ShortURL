@@ -1,5 +1,13 @@
 ## Application Service > ShortURL > Release Notes
 
+### 2021. 07. 27.
+
+#### Feature Updates
+* You can check each event in Cloud Trail.
+
+#### Bug Fixes
+* Fixed an issue where a project that was supposed to be unavailable could be selected when specifying the target to share the domain and certificate.
+
 ### 2021. 06. 29.
 
 #### Feature Updates
