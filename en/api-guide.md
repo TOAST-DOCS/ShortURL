@@ -38,7 +38,7 @@ Content-Type: application/json
 {
    "url": "https://nhn.com",
    "domain": "nh,nu",
-   "campaigns": [0,1],
+   "campaigns": [1,2],
    "backHalf": "example"
 }
 ```
@@ -71,8 +71,8 @@ Content-Type: application/json
 | body.originUrl | String | Full URL |
 | body.status | String | Shortened URL state |
 | body.backHalfType | String | Shortened URL state |
-| body.startAt | String | Date to start using the shortened URL |
-| body.endAt | String | Date to end the use of the shortened URL |
+| body.startDateTime | String | Date and time to start using the shortened URL |
+| body.endDateTime | String | Date and time to end the use of the shortened URL |
 
 ### 2. Search
 - Search for a shortened URL.
@@ -80,8 +80,7 @@ Content-Type: application/json
 [URL]
 
 ```http
-POST /open-api/v1.0/appkeys/{appkey}/domains/{domain}/urls/{backHalf}
-Content-Type: application/json
+GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}
 ```
 
 #### Request
@@ -108,8 +107,8 @@ Content-Type: application/json
         "originUrl": "https://nhn.com",
         "status": "ACTIVE",
         "backHalfType": "AUTO",
-        "startAt": "2021-03-26T03:35+0000",
-        "endAt": "9999-12-31T00:00+0000"
+        "startDateTime": "2021-03-26T03:35+0000",
+        "endDateTime": "9999-12-31T00:00+0000"
     }
 }
 ```
@@ -123,19 +122,18 @@ Content-Type: application/json
 | body.originUrl | String | Full URL |
 | body.status | String | Shortened URL state |
 | body.backHalfType | String | Method of creating the shortened URL |
-| body.startAt | String | Date to start using the shortened URL |
-| body.endAt | String | Date to end the use of the shortened URL |
+| body.startDateTime | String | Date and time to start using the shortened URL |
+| body.endDateTime | String | Date and time to end the use of the shortened URL |
 
 
 
 ### 3. Search for a QR code
-- Create a shortened URL.
+- Search for the QR code of a shortened URL.
 
 [URL]
 
 ```http
-POST /domains/{domain}/urls/{backHalf}/qrcode
-Content-Type: image/png
+GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}/qrcode
 ```
 
 #### Request
