@@ -1,5 +1,10 @@
 ## Application Service > ShortURL > Release Notes
 
+### 2021. 08. 24.
+
+#### Bug fixes
+* Fixed an issue where, when you delete an affiliated URL of a campaign, all affiliated URLs of the campaign are deleted.
+
 ### 2021. 07. 27.
 
 #### Feature Updates
