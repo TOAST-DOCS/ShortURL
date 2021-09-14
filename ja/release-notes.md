@@ -1,5 +1,14 @@
 ## Application Service > ShortURL > リリースノート
 
+### 2021. 09. 28
+
+#### 機能改善
+ShortUrlの後ろにqueryParameterをつけて使用できます。
+ex) `nh.nu/abc` -> `www.coupang.com/vp/products/1821016708`の場合、`nh.nu/abc?param=param`は`www.coupang.com/vp/products/1821016708?param=param`で接続されます。
+
+#### バグ修正
+* 証明書リストの状態表示色が実際の状態と合っていない問題を修正しました。
+
 ### 2021. 08. 24.
 
 #### バグ修正
