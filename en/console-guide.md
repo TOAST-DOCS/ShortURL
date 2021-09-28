@@ -50,6 +50,7 @@ Address: 43.227.116.15
 - Checks if the IP is a shortened URL server IP when registering a **Domain**.
 - **Open Range** allows multiple projects within the same organization to share and use a **Domain**.
 - Click the **More** button to see more information on the domain.
+- The registered **Domain** cannot be re-registered in another organization or project.
 
 ### View domain
 - In **Manage > Domain** tab, you can check the **Domain** information.
@@ -100,6 +101,7 @@ cat mydomain.crt mydomain.key root-ca-chain.pem > mydomain.pem
 - **Open Range** allows multiple projects within the same organization to share and use a **Certificate** 
   - In the case of a *_wildcard* certificate, only one can be registered; therefore, the certificate must be shared to be able to make it usable.
 - Click the **More** button to see more information on the certificate.
+- The registered **Certificate** cannot be re-registered in another organization or project.
 
 ### View certificate
 - In **Manage > Certificate** tab, you can check the **Certificate** information.

@@ -1,5 +1,14 @@
 ## Application Service > ShortURL > 릴리스 노트
 
+### 2021. 09. 28
+
+#### 기능개선
+ShortUrl 뒤에 queryParameter를 붙여서 사용할 수 있습니다.
+예) `nh.nu/abc` -> `www.coupang.com/vp/products/1821016708`인 경우, `nh.nu/abc?param=param`는 `www.coupang.com/vp/products/1821016708?param=param`으로 연결됩니다.
+
+#### 버그 수정
+* 인증서 목록의 상태 표시 색이 실제 상태와 간헐적으로 맞지 않던 문제를 해결했습니다.
+
 ### 2021. 08. 24.
 
 #### 버그 수정
