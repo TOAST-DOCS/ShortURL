@@ -33,13 +33,20 @@ Content-Type: application/json
 | domain | String | X | 단축 URL에 사용할 도메인(없을 경우 nh.nu로 생성) |
 | backHalf | String | X | 단축 URL ID(https://nh.nu/example 에서 example을 가리키며, 없을 경우 랜덤 생성) |
 | campaigns | List<String> | X | 소속될 캠페인 ID 목록 |
+| startDateTime | String | X | shortUrl 사용 시작 일시 |
+| endDateTime | String | X | shortUrl 사용 만료 일시 |
+
+* `startDateTime` 및, `endDateTime`을 추가할 때 `DateTimeFormatter.ISO_OFFSET_DATE_TIME` 포맷을 사용해주세요
+* `startDateTime`을 따로 지정하지 않을 경우 현재시점으로 적용되며, `endDateTime`을 따로 지정하지 않을 경우 `startDateTime`의 3개월 이후로 적용됩니다.
 
 ```json
 {
    "url": "https://nhn.com",
    "domain": "nh,nu",
    "campaigns": [1,2],
-   "backHalf": "example"
+   "backHalf": "example",
+   "startDateTime" : "2022-11-10T02:58Z",
+   "endDateTime": "2100-02-10T02:58Z"
 }
 ```
 
@@ -56,8 +63,8 @@ Content-Type: application/json
         "originUrl": "https://nhn.com",
         "status": "ACTIVE",
         "backHalfType": "AUTO",
-        "startDateTime": "2021-03-26T03:35+0000",
-        "endDateTime": "9999-12-31T00:00+0000"
+        "startDateTime" : "2022-11-10T02:58Z",
+        "endDateTime": "2100-02-10T02:58Z"
     }
 }
 ```
