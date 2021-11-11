@@ -30,12 +30,19 @@ Content-Type: application/json
 | domain | String | X | 短縮URLに使用するドメイン(ない場合はnh.nuで作成) |
 | backHalf | String | X | 短縮URL ID(https://nh.nu/exampleではexampleを指す。ない場合はランダムに作成) |
 | campaigns | List<String> | X | 所属するキャンペーンIDリスト |
+| startDateTime | String | X | shortUrl使用開始日時 |
+| endDateTime | String | X | shortUrl使用終了日時 |
+
+* `startDateTime`および`endDateTime`を追加する時、`DateTimeFormatter.ISO_OFFSET_DATE_TIME`フォーマットを使用してください。
+* `startDateTime`を別途指定しない場合は、現在時点に設定され、`endDateTime`を別途指定しない場合は`startDateTime`の3か月後に設定されます。
 ```json
 {
    "url": "https://nhn.com",
    "domain": "nh,nu",
    "campaigns": [0,1],
-   "backHalf": "example"
+   "backHalf": "example",
+   "startDateTime" : "2022-11-10T02:58Z",
+   "endDateTime": "2100-02-10T02:58Z"
 }
 ```
 
@@ -52,8 +59,8 @@ Content-Type: application/json
         "originUrl": "https://nhn.com",
         "status": "ACTIVE",
         "backHalfType": "AUTO",
-        "startAt": "2021-03-26T03:35+0000",
-        "endAt": "9999-12-31T00:00+0000"
+        "startDateTime" : "2022-11-10T02:58Z",
+        "endDateTime": "2100-02-10T02:58Z"
     }
 }
 ```
