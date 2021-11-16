@@ -95,7 +95,7 @@ cat mydomain.crt mydomain.key root-ca-chain.pem > mydomain.pem
 
 
 ### Add certificate
-- -In **Manage > Certificate ** tab, click the **Add Certificate** button to add a certificate owned by users.
+- -In **Manage > Certificate** tab, click the **Add Certificate** button to add a certificate owned by users.
 - When a **Certificate** is uploaded, the certificate is validated. If the certificate is validated to be usable, the information is automatically displayed on the console.
     - You cannot use a certificate already in use.
 - **Open Range** allows multiple projects within the same organization to share and use a **Certificate** 
@@ -106,3 +106,8 @@ cat mydomain.crt mydomain.key root-ca-chain.pem > mydomain.pem
 ### View certificate
 - In **Manage > Certificate** tab, you can check the **Certificate** information.
 - Click the **More** button to see more information on the certificate.
+
+### Renew certificate
+- In the **Manage > Certificates** tab, you can renew a certificate by clicking the **Edit** button for each certificate.
+    - Only a certificate with the same common name (CN) can be registered.
+    - Only a certificate whose expiration date is later than the expiration date of previously registered certificate can be registered.

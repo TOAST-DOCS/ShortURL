@@ -1,5 +1,16 @@
 ## Application Service > ShortURL > Release Notes
 
+### 2021. 11. 23.
+
+#### Feature Updates
+* Switched from beta service to official service.
+* Improved certificate renewal feature
+    * Expired certificates are displayed as expired status.
+    * You can use the Edit button to renew the certificate to a certificate with the same common name (CN).
+
+#### Bug Fixes
+* Fixed an issue where expiration date is not set correctly when generating shortUrl through API.
+
 ### 2021. 09. 28
 
 #### Feature Updates
