@@ -21,17 +21,17 @@ Content-Type: application/json
 
 [Path Variables]
 
-| Name |	Type | Required | Description |
+| Name | Type | Required | Description |
 |---|---|---|---|
-| appKey | String | O | Service Appkey (**Manage Service** tab to be checked) |
+| appKey | String | O | Service Appkey (Can be found on the **Manage Service** tab) |
 
 [Request Body]
 
-| Name |	Type | Required | Description |
+| Name | Type | Required | Description |
 |---|---|---|---|
 | url | String | O | Full URL |
-| domain | String | X | The domain to use for shortened URL (create as nh.nu if there is none) |
-| backHalf | String | X | Shortened URL ID (Refers to `example` in https://nh.nu/example; randomly create one if there is none) |
+| domain | String | X | The domain to use for shortened URL (created as nh.nu if not specified) |
+| backHalf | String | X | Shortened URL ID (Refers to `example` in https://nh.nu/example. Created randomly if not specified) |
 | campaigns | List<String> | X | List of campaign IDs to belong to |
 | startDateTime | String | X | Date and time to start using shortURL |
 | endDateTime | String | X | Date and time to end the use of shortUrl |
@@ -71,13 +71,13 @@ Content-Type: application/json
 
 | Name | Type | Description |
 |---|---|---|
-| header.isSuccessful | Boolean | Success |
+| header.isSuccessful | Boolean | Successful or not |
 | header.resultCode | Integer | Result code |
 | header.resultMessage | String | Failure message |
 | body.shortUrl | String | Shortened URL |
 | body.originUrl | String | Full URL |
-| body.status | String | Shortened URL state |
-| body.backHalfType | String | Shortened URL state |
+| body.status | String | Shortened URL status |
+| body.backHalfType | String | Method of creating the shortened URL |
 | body.startDateTime | String | Date and time to start using the shortened URL |
 | body.endDateTime | String | Date and time to end the use of the shortened URL |
 
@@ -94,9 +94,9 @@ GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}
 
 [Path Variables]
 
-| Name |	Type | Required | Description |
+| Name | Type | Required | Description |
 |---|---|---|---|
-| appKey | String | O | Service Appkey (**Manage Service** tab to be checked) |
+| appKey | String | O | Service Appkey (Can be found on the **Manage Service** tab) |
 | domain | String | O | Domain name |
 | backHalf | String | O | Shortened URL path ID |
 
@@ -122,12 +122,12 @@ GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}
 
 | Name | Type | Description |
 |---|---|---|
-| header.isSuccessful | Boolean | Success |
+| header.isSuccessful | Boolean | Successful or not |
 | header.resultCode | Integer | Result code |
 | header.resultMessage | String | Failure message |
 | body.shortUrl | String | Shortened URL |
 | body.originUrl | String | Full URL |
-| body.status | String | Shortened URL state |
+| body.status | String | Shortened URL status |
 | body.backHalfType | String | Method of creating the shortened URL |
 | body.startDateTime | String | Date and time to start using the shortened URL |
 | body.endDateTime | String | Date and time to end the use of the shortened URL |
@@ -147,9 +147,9 @@ GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}/qrcode
 
 [Path Variables]
 
-| Name |	Type | Required | Description |
+| Name | Type | Required | Description |
 |---|---|---|---|
-| appKey | String | O | Service Appkey (**Manage Service** tab to be checked) |
+| appKey | String | O | Service Appkey (Can be found on the **Manage Service** tab) |
 | domain | String | O | Domain name |
 | backHalf | String | O | Shortened URL path ID |
 
@@ -167,7 +167,7 @@ GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}/qrcode
 
 | Name | Type | Description |
 |---|---|---|
-| header.isSuccessful | Boolean | Success |
+| header.isSuccessful | Boolean | Successful or not |
 | header.resultCode | Integer | Failure Code (0: Normal) |
 | header.resultMessage | String | Failure message |
 | body | String | Base64-encoded PNG image |

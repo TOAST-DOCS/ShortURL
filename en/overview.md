@@ -5,8 +5,8 @@ RESTful API is provided to users for easy link with apps.
 
 
 ## Key Features
-- Creates custom URL
+- Creates a custom URL
 - Supports QR code
 - Manages a number of link resources using campaign
-- Register a custom domain to utilize your own branding link
-- Register a custom SSL certificate to safely share your link
+- Allows you to register a custom domain to utilize your own branding link
+- Allows you to register a custom SSL certificate to share your link safely
