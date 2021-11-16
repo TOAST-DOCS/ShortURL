@@ -19,12 +19,12 @@ Content-Type: application/json
 #### リクエスト
 
 [Path Variables]
-| 値 |	タイプ | 必須かどうか | 説明 |
+| 名前 |	タイプ | 必須かどうか | 説明 |
 |---|---|---|---|
 | appkey | String | O | サービスAppkey(**サービス管理**タブで確認可能) |
 
 [Request Body]
-| 値 |	タイプ | 必須かどうか | 説明 |
+| 名前 |	タイプ | 必須かどうか | 説明 |
 |---|---|---|---|
 | url | String | O | 元のURL |
 | domain | String | X | 短縮URLに使用するドメイン(ない場合はnh.nuで作成) |
@@ -65,7 +65,7 @@ Content-Type: application/json
 }
 ```
 
-| 値 | タイプ | 説明 |
+| 名前 | タイプ | 説明 |
 |---|---|---|
 | header.isSuccessful | Boolean | 成否 |
 | header.resultCode | Integer | 結果コード |
@@ -89,7 +89,7 @@ Content-Type: application/json
 #### リクエスト
 
 [Path Variables]
-| 値 |	タイプ | 必須かどうか | 説明 |
+| 名前 |	タイプ | 必須かどうか | 説明 |
 |---|---|---|---|
 | appkey | String | O | サービスAppkey(**サービス管理**タブで確認可能) |
 | domain | String | O | ドメイン名 |
@@ -115,7 +115,7 @@ Content-Type: application/json
 }
 ```
 
-| 値 | タイプ | 説明 |
+| 名前 | タイプ | 説明 |
 |---|---|---|
 | header.isSuccessful | Boolean | 成否 |
 | header.resultCode | Integer | 結果コード |
@@ -141,7 +141,7 @@ Content-Type: image/png
 #### リクエスト
 
 [Path Variables]
-| 値 |	タイプ | 必須かどうか | 説明 |
+| 名前 |	タイプ | 必須かどうか | 説明 |
 |---|---|---|---|
 | appkey | String | O | サービスAppkey(**サービス管理**タブで確認可能) |
 | domain | String | O | ドメイン名 |
@@ -159,7 +159,7 @@ Content-Type: image/png
 }
 ```
 
-| 値 | タイプ | 説明 |
+| 名前 | タイプ | 説明 |
 |---|---|---|
 | header.isSuccessful | Boolean | 成否 |
 | header.resultCode | Integer | 失敗コード(0は正常) |
