@@ -21,13 +21,13 @@ Content-Type: application/json
 
 [Path Variables]
 
-| 값 |	타입 | 필수 여부 | 설명 |
+| 이름 | 타입 | 필수 여부 | 설명 |
 |---|---|---|---|
 | appKey | String | O | 서비스 Appkey(**서비스 관리** 탭에서 확인 가능) |
 
 [Request Body]
 
-| 값 |	타입 | 필수 여부 | 설명 |
+| 이름 | 타입 | 필수 여부 | 설명 |
 |---|---|---|---|
 | url | String | O | 원본 URL |
 | domain | String | X | 단축 URL에 사용할 도메인(없을 경우 nh.nu로 생성) |
@@ -69,7 +69,7 @@ Content-Type: application/json
 }
 ```
 
-| 값 | 타입 | 설명 |
+| 이름 | 타입 | 설명 |
 |---|---|---|
 | header.isSuccessful | Boolean | 성공 여부 |
 | header.resultCode | Integer | 결과 코드 |
@@ -94,7 +94,7 @@ GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}
 
 [Path Variables]
 
-| 값 |	타입 | 필수 여부 | 설명 |
+| 이름 | 타입 | 필수 여부 | 설명 |
 |---|---|---|---|
 | appKey | String | O | 서비스 Appkey(**서비스 관리** 탭에서 확인 가능) |
 | domain | String | O | 도메인 이름 |
@@ -120,7 +120,7 @@ GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}
 }
 ```
 
-| 값 | 타입 | 설명 |
+| 이름 | 타입 | 설명 |
 |---|---|---|
 | header.isSuccessful | Boolean | 성공 여부 |
 | header.resultCode | Integer | 결과 코드 |
@@ -147,7 +147,7 @@ GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}/qrcode
 
 [Path Variables]
 
-| 값 |	타입 | 필수 여부 | 설명 |
+| 이름 | 타입 | 필수 여부 | 설명 |
 |---|---|---|---|
 | appKey | String | O | 서비스 Appkey(**서비스 관리** 탭에서 확인 가능) |
 | domain | String | O | 도메인 이름 |
@@ -165,7 +165,7 @@ GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}/qrcode
 }
 ```
 
-| 값 | 타입 | 설명 |
+| 이름 | 타입 | 설명 |
 |---|---|---|
 | header.isSuccessful | Boolean | 성공 여부 |
 | header.resultCode | Integer | 실패 코드(0은 정상) |
