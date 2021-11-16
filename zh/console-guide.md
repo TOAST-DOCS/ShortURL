@@ -36,7 +36,7 @@
 ### Register DNS
 > IP: 43.227.116.15
 - **Domain** can be added only after the **Domain** is registered with the above IP of the DNS server.
-  - **A record** is checked for its validation; thus, **A record** must be present.
+    - **A record** is checked for its validation; thus, **A record** must be present.
 - **nslookup** command can be used to check if DNS is properly registered as shown below.
 
 ```bash
@@ -96,9 +96,9 @@ cat mydomain.crt mydomain.key root-ca-chain.pem > mydomain.pem
 ### Add certificate
 - -In **Manage > Certificate ** tab, click the **Add Certificate** button to add a certificate owned by users.
 - When a **Certificate** is uploaded, the certificate is validated. If the certificate is validated to be usable, the information is automatically displayed on the console.
-  - You cannot use a certificate already in use.
+    - You cannot use a certificate already in use.
 - **Open Range** allows multiple projects within the same organization to share and use a **Certificate** 
-  - In the case of a *_wildcard* certificate, only one can be registered; therefore, the certificate must be shared to be able to make it usable.
+    - In the case of a *_wildcard* certificate, only one can be registered; therefore, the certificate must be shared to be able to make it usable.
 - Click the **More** button to see more information on the certificate.
 
 ### View certificate
