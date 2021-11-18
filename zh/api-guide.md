@@ -13,7 +13,7 @@ API Endpoint: https://api-shorturl.cloud.toast.com
 [URL]
 
 ```http
-POST /open-api/v1.0/appkeys/{appkey}/urls
+POST /open-api/v1.0/appkeys/{appKey}/urls
 Content-Type: application/json
 ```
 
@@ -21,25 +21,32 @@ Content-Type: application/json
 
 [Path Variables]
 
-| Value |	Type | Required? | Description |
+| Name | Type | Required | Description |
 |---|---|---|---|
-| appkey | String | O | Service Appkey (**Manage Service** tab to be checked) |
+| appKey | String | O | Service Appkey (Can be found on the **Manage Service** tab) |
 
 [Request Body]
 
-| Value |	Type | Required? | Description |
+| Name | Type | Required | Description |
 |---|---|---|---|
 | url | String | O | Full URL |
-| domain | String | X | The domain to use for shortened URL (create as nh.nu if there is none) |
-| backHalf | String | X | Shortened URL ID (Refers to `example` in https://nh.nu/example; randomly create one if there is none) |
+| domain | String | X | The domain to use for shortened URL (created as nh.nu if not specified) |
+| backHalf | String | X | Shortened URL ID (Refers to `example` in https://nh.nu/example. Created randomly if not specified) |
 | campaigns | List<String> | X | List of campaign IDs to belong to |
+| startDateTime | String | X | Date and time to start using shortURL |
+| endDateTime | String | X | Date and time to end the use of shortUrl |
+
+* When adding `startDateTime` and `endDateTime`, use the `DateTimeFormatter.ISO_OFFSET_DATE_TIME` format.
+* If `startDateTime` is not specified, it is set to the current time. If `endDateTime` is not specified, it is set to 3 months after `startDateTime`.
 
 ```json
 {
    "url": "https://nhn.com",
    "domain": "nh,nu",
-   "campaigns": [0,1],
-   "backHalf": "example"
+   "campaigns": [1,2],
+   "backHalf": "example",
+   "startDateTime" : "2022-11-10T02:58Z",
+   "endDateTime": "2100-02-10T02:58Z"
 }
 ```
 
@@ -56,23 +63,23 @@ Content-Type: application/json
         "originUrl": "https://nhn.com",
         "status": "ACTIVE",
         "backHalfType": "AUTO",
-        "startAt": "2021-03-26T03:35+0000",
-        "endAt": "9999-12-31T00:00+0000"
+        "startDateTime" : "2022-11-10T02:58Z",
+        "endDateTime": "2100-02-10T02:58Z"
     }
 }
 ```
 
-| Value | Type | Description |
+| Name | Type | Description |
 |---|---|---|
-| header.isSuccessful | Boolean | Success |
+| header.isSuccessful | Boolean | Successful or not |
 | header.resultCode | Integer | Result code |
 | header.resultMessage | String | Failure message |
 | body.shortUrl | String | Shortened URL |
 | body.originUrl | String | Full URL |
-| body.status | String | Shortened URL state |
-| body.backHalfType | String | Shortened URL state |
-| body.startAt | String | Date to start using the shortened URL |
-| body.endAt | String | Date to end the use of the shortened URL |
+| body.status | String | Shortened URL status |
+| body.backHalfType | String | Method of creating the shortened URL |
+| body.startDateTime | String | Date and time to start using the shortened URL |
+| body.endDateTime | String | Date and time to end the use of the shortened URL |
 
 ### 2. Search
 - Search for a shortened URL.
@@ -80,17 +87,16 @@ Content-Type: application/json
 [URL]
 
 ```http
-POST /open-api/v1.0/appkeys/{appkey}/domains/{domain}/urls/{backHalf}
-Content-Type: application/json
+GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}
 ```
 
 #### Request
 
 [Path Variables]
 
-| Value |	Type | Required? | Description |
+| Name | Type | Required | Description |
 |---|---|---|---|
-| appkey | String | O | Service Appkey (**Manage Service** tab to be checked) |
+| appKey | String | O | Service Appkey (Can be found on the **Manage Service** tab) |
 | domain | String | O | Domain name |
 | backHalf | String | O | Shortened URL path ID |
 
@@ -108,43 +114,42 @@ Content-Type: application/json
         "originUrl": "https://nhn.com",
         "status": "ACTIVE",
         "backHalfType": "AUTO",
-        "startAt": "2021-03-26T03:35+0000",
-        "endAt": "9999-12-31T00:00+0000"
+        "startDateTime": "2021-03-26T03:35+0000",
+        "endDateTime": "9999-12-31T00:00+0000"
     }
 }
 ```
 
-| Value | Type | Description |
+| Name | Type | Description |
 |---|---|---|
-| header.isSuccessful | Boolean | Success |
+| header.isSuccessful | Boolean | Successful or not |
 | header.resultCode | Integer | Result code |
 | header.resultMessage | String | Failure message |
 | body.shortUrl | String | Shortened URL |
 | body.originUrl | String | Full URL |
-| body.status | String | Shortened URL state |
+| body.status | String | Shortened URL status |
 | body.backHalfType | String | Method of creating the shortened URL |
-| body.startAt | String | Date to start using the shortened URL |
-| body.endAt | String | Date to end the use of the shortened URL |
+| body.startDateTime | String | Date and time to start using the shortened URL |
+| body.endDateTime | String | Date and time to end the use of the shortened URL |
 
 
 
 ### 3. Search for a QR code
-- Create a shortened URL.
+- Search for the QR code of a shortened URL.
 
 [URL]
 
 ```http
-POST /domains/{domain}/urls/{backHalf}/qrcode
-Content-Type: image/png
+GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}/qrcode
 ```
 
 #### Request
 
 [Path Variables]
 
-| Value |	Type | Required? | Description |
+| Name | Type | Required | Description |
 |---|---|---|---|
-| appkey | String | O | Service Appkey (**Manage Service** tab to be checked) |
+| appKey | String | O | Service Appkey (Can be found on the **Manage Service** tab) |
 | domain | String | O | Domain name |
 | backHalf | String | O | Shortened URL path ID |
 
@@ -160,9 +165,9 @@ Content-Type: image/png
 }
 ```
 
-| Value | Type | Description |
+| Name | Type | Description |
 |---|---|---|
-| header.isSuccessful | Boolean | Success |
+| header.isSuccessful | Boolean | Successful or not |
 | header.resultCode | Integer | Failure Code (0: Normal) |
 | header.resultMessage | String | Failure message |
 | body | String | Base64-encoded PNG image |
