@@ -1,6 +1,17 @@
 ## Application Service > ShortURL > Release Notes
 
-### 2021. 09. 28
+### November 23, 2021
+
+#### Feature Updates
+* Switched from beta service to official service.
+* Improved certificate renewal feature
+    * Expired certificates are displayed as expired status.
+    * You can use the Edit button to renew the certificate to a certificate with the same common name (CN).
+
+#### Bug Fixes
+* Fixed an issue where expiration date is not set correctly when generating shortUrl through API.
+
+### September 28, 2021
 
 #### Feature Updates
 * Added a feature to append a query parameter after ShortUrl.
@@ -9,12 +20,12 @@
 #### Bug Fixes
 * Fixed an issue where the status display color in the certificate list does not match the actual status intermittently.
 
-### 2021. 08. 24.
+### August 24, 2021
 
 #### Bug fixes
 * Fixed an issue where, when you delete an affiliated URL of a campaign, all affiliated URLs of the campaign are deleted.
 
-### 2021. 07. 27.
+### July 27, 2021
 
 #### Feature Updates
 * You can check each event in Cloud Trail.
@@ -22,7 +33,7 @@
 #### Bug Fixes
 * Fixed an issue where a project that was supposed to be unavailable could be selected when specifying the target to share the domain and certificate.
 
-### 2021. 06. 29.
+### June 29, 2021
 
 #### Feature Updates
 * When registering a certificate for an already existing domain, the name of the project with the registered certificate will be provided.
@@ -31,14 +42,14 @@
 #### Bug Fixes
 * Fixed an issue where the full URL can be modified in the shortened URL edit screen.
 
-### 2021. 05. 25.
+### May 25, 2021
 
 #### Feature Updates
 * Added a [Console] page feature
     * Added the page feature to View > URL screen.
 
-### 2021. 04. 27.
+### April 27, 2021
 
-#### New Service Releases
+#### New Service Release
 * ShortURL allows you to share your website link with a shorter character length in a wide variety of environments where writing space is limited.
 * RESTful API is provided to users for easy link with apps.
