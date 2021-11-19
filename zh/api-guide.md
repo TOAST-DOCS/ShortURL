@@ -36,36 +36,36 @@ Content-Type: application/json
 | startDateTime | String | X | Date and time to start using shortURL |
 | endDateTime | String | X | Date and time to end the use of shortUrl |
 
-* When adding `startDateTime` and `endDateTime`, use the `DateTimeFormatter.ISO_OFFSET_DATE_TIME` format.
-* If `startDateTime` is not specified, it is set to the current time. If `endDateTime` is not specified, it is set to 3 months after `startDateTime`.
+* When adding startDateTime and endDateTime, use the DateTimeFormatter.ISO_OFFSET_DATE_TIME format.
+* If startDateTime is not specified, it is set to the current time. If endDateTime is not specified, it is set to 3 months after startDateTime.
 
 ```json
 {
-   "url": "https://nhn.com",
-   "domain": "nh,nu",
-   "campaigns": [1,2],
-   "backHalf": "example",
-   "startDateTime" : "2022-11-10T02:58Z",
-   "endDateTime": "2100-02-10T02:58Z"
+  "url": "https://nhn.com",
+  "domain": "nh,nu",
+  "campaigns": [1,2],
+  "backHalf": "example",
+  "startDateTime" : "2022-11-10T02:58Z",
+  "endDateTime": "2100-02-10T02:58Z"
 }
 ```
 
 #### Response
 ```json
 {
-    "header": {
-        "isSuccessful": true,
-        "resultCode": 0,
-        "resultMessage": "SUCCESS"
-    },
-    "body": {
-        "shortUrl": "http://nh.nu/a",
-        "originUrl": "https://nhn.com",
-        "status": "ACTIVE",
-        "backHalfType": "AUTO",
-        "startDateTime" : "2022-11-10T02:58Z",
-        "endDateTime": "2100-02-10T02:58Z"
-    }
+  "header": {
+    "isSuccessful": true,
+    "resultCode": 0,
+    "resultMessage": "SUCCESS"
+  },
+  "body": {
+    "shortUrl": "http://nh.nu/a",
+    "originUrl": "https://nhn.com",
+    "status": "ACTIVE",
+    "backHalfType": "AUTO",
+    "startDateTime" : "2022-11-10T02:58Z",
+    "endDateTime": "2100-02-10T02:58Z"
+  }
 }
 ```
 
@@ -104,19 +104,19 @@ GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}
 #### Response
 ```json
 {
-    "header": {
-        "isSuccessful": true,
-        "resultCode": 0,
-        "resultMessage": "SUCCESS"
-    },
-    "body": {
-        "shortUrl": "http://nh.nu/a",
-        "originUrl": "https://nhn.com",
-        "status": "ACTIVE",
-        "backHalfType": "AUTO",
-        "startDateTime": "2021-03-26T03:35+0000",
-        "endDateTime": "9999-12-31T00:00+0000"
-    }
+  "header": {
+    "isSuccessful": true,
+    "resultCode": 0,
+    "resultMessage": "SUCCESS"
+  },
+  "body": {
+    "shortUrl": "http://nh.nu/a",
+    "originUrl": "https://nhn.com",
+    "status": "ACTIVE",
+    "backHalfType": "AUTO",
+    "startDateTime": "2021-03-26T03:35+0000",
+    "endDateTime": "9999-12-31T00:00+0000"
+  }
 }
 ```
 
@@ -156,12 +156,12 @@ GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}/qrcode
 #### Response
 ```json
 {
-    "header": {
-        "isSuccessful": true,
-        "resultCode": 0,
-        "resultMessage": "SUCCESS"
-    },
-    "body": "iVBORw0KGgoAAAANSUhEUgAAAIIAAACCAQAAAACieC1QAAAA+0lEQVR4Xu3UsZHEIAwFUO0QkO024BnaIKMlbwNnuwHTkjO3wYwasDMCBp18wbHrxFJ6t4rMCzTigwE61QIf+ZOSAGizNILRCFIuj0yRPzQyeqoeZ9AKVjB6ScN66nMtlGmD0y4uhfPB2eN7Ypdy1JSPpUbSsHTPTNXqBEL6CtCDU8kdMC4urm0XAqGJuA+N9jcfiZS7L73FqaUqkfRcu4HMTk4jPHDpvdvbzCKpgcd2fIgq2Xx342w9aeSnlcWqk+OOcThzS1UifJ95aWpoO5UI/6ezB3h5E2TCb0J5vKQqExoD7rnNLBHK6ZaRUSNHPnExcVXJW33kX8g3k5xLHpTtgoMAAAAASUVORK5CYII="
+  "header": {
+    "isSuccessful": true,
+    "resultCode": 0,
+    "resultMessage": "SUCCESS"
+  },
+  "body": "iVBORw0KGgoAAAANSUhEUgAAAIIAAACCAQAAAACieC1QAAAA+0lEQVR4Xu3UsZHEIAwFUO0QkO024BnaIKMlbwNnuwHTkjO3wYwasDMCBp18wbHrxFJ6t4rMCzTigwE61QIf+ZOSAGizNILRCFIuj0yRPzQyeqoeZ9AKVjB6ScN66nMtlGmD0y4uhfPB2eN7Ypdy1JSPpUbSsHTPTNXqBEL6CtCDU8kdMC4urm0XAqGJuA+N9jcfiZS7L73FqaUqkfRcu4HMTk4jPHDpvdvbzCKpgcd2fIgq2Xx342w9aeSnlcWqk+OOcThzS1UifJ95aWpoO5UI/6ezB3h5E2TCb0J5vKQqExoD7rnNLBHK6ZaRUSNHPnExcVXJW33kX8g3k5xLHpTtgoMAAAAASUVORK5CYII="
 }
 ```
 
