@@ -36,8 +36,8 @@ Content-Type: application/json
 | startDateTime | String | X | shortUrl 사용 시작 일시 |
 | endDateTime | String | X | shortUrl 사용 만료 일시 |
 
-* startDateTime 및 endDateTime을 추가할 때 DateTimeFormatter.ISO_OFFSET_DATE_TIME 포맷을 사용해 주세요.
-* startDateTime을 별도로 지정하지 않으면 현재 시점으로 설정되며, endDateTime을 별도로 지정하지 않으면 startDateTime의 3개월 이후로 설정됩니다.
+* **startDateTime** 및 **endDateTime**을 추가할 때 **DateTimeFormatter.ISO_OFFSET_DATE_TIME** 포맷을 사용해 주세요.
+* **startDateTime**을 별도로 지정하지 않으면 현재 시점으로 설정되며, **endDateTime**을 별도로 지정하지 않으면 **startDateTime**의 3개월 이후로 설정됩니다.
 
 ```json
 {
