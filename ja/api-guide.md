@@ -33,8 +33,8 @@ Content-Type: application/json
 | startDateTime | String | X | shortUrl使用開始日時 |
 | endDateTime | String | X | shortUrl使用終了日時 |
 
-* `startDateTime`および`endDateTime`を追加する時、`DateTimeFormatter.ISO_OFFSET_DATE_TIME`フォーマットを使用してください。
-* `startDateTime`を別途指定しない場合は、現在時点に設定され、`endDateTime`を別途指定しない場合は`startDateTime`の3か月後に設定されます。
+* startDateTimeおよびendDateTimeを追加する時、DateTimeFormatter.ISO_OFFSET_DATE_TIMEフォーマットを使用してください。
+* startDateTimeを別途指定しない場合は、現在時点に設定され、endDateTimeを別途指定しない場合はstartDateTimeの3か月後に設定されます。
 ```json
 {
    "url": "https://nhn.com",
