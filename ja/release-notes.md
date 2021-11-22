@@ -1,13 +1,23 @@
 ## Application Service > ShortURL > リリースノート
 
-### 2021. 09. 28
+### 2021. 11. 23.
 
-#### 機能改善
-ShortUrlの後ろにqueryParameterをつけて使用できます。
-ex) `nh.nu/abc` -> `www.coupang.com/vp/products/1821016708`の場合、`nh.nu/abc?param=param`は`www.coupang.com/vp/products/1821016708?param=param`で接続されます。
+#### 機能改善/変更
+* ベータサービスから正式サービスに切り替わりました。
+* 証明書更新機能の改善
+    * 有効期限が切れた証明書が期限切れ状態と表示されます。
+    * 編集ボタンを使用して証明書をcommon name(CN)が同じ証明書に更新できます。
 
 #### バグ修正
-* 証明書リストの状態表示色が実際の状態と合っていない問題を修正しました。
+* APIを介してshortUrlを作成する時、有効期限が正しく設定されなかった問題を修正しました。
+
+### 2021. 09. 28.
+
+#### 機能改善
+ShortUrlの後ろにqueryParameterを付けて使用できます。
+例) `nh.nu/abc` -> `www.coupang.com/vp/products/1821016708`の場合、 `nh.nu/abc?param=param`は`www.coupang.com/vp/products/1821016708?param=param`に接続されます。
+#### バグ修正
+* 証明書リストの状態表示色が実際の状態と合っていなかった問題を修正しました。
 
 ### 2021. 08. 24.
 

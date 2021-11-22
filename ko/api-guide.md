@@ -21,25 +21,32 @@ Content-Type: application/json
 
 [Path Variables]
 
-| 값 |	타입 | 필수 여부 | 설명 |
+| 이름 | 타입 | 필수 여부 | 설명 |
 |---|---|---|---|
 | appKey | String | O | 서비스 Appkey(**서비스 관리** 탭에서 확인 가능) |
 
 [Request Body]
 
-| 값 |	타입 | 필수 여부 | 설명 |
+| 이름 | 타입 | 필수 여부 | 설명 |
 |---|---|---|---|
 | url | String | O | 원본 URL |
 | domain | String | X | 단축 URL에 사용할 도메인(없을 경우 nh.nu로 생성) |
 | backHalf | String | X | 단축 URL ID(https://nh.nu/example 에서 example을 가리키며, 없을 경우 랜덤 생성) |
 | campaigns | List<String> | X | 소속될 캠페인 ID 목록 |
+| startDateTime | String | X | shortUrl 사용 시작 일시 |
+| endDateTime | String | X | shortUrl 사용 만료 일시 |
+
+* **startDateTime** 및 **endDateTime**을 추가할 때 **DateTimeFormatter.ISO_OFFSET_DATE_TIME** 포맷을 사용해 주세요.
+* **startDateTime**을 별도로 지정하지 않으면 현재 시점으로 설정되며, **endDateTime**을 별도로 지정하지 않으면 **startDateTime**의 3개월 이후로 설정됩니다.
 
 ```json
 {
    "url": "https://nhn.com",
    "domain": "nh,nu",
    "campaigns": [1,2],
-   "backHalf": "example"
+   "backHalf": "example",
+   "startDateTime" : "2022-11-10T02:58Z",
+   "endDateTime": "2100-02-10T02:58Z"
 }
 ```
 
@@ -56,13 +63,13 @@ Content-Type: application/json
         "originUrl": "https://nhn.com",
         "status": "ACTIVE",
         "backHalfType": "AUTO",
-        "startDateTime": "2021-03-26T03:35+0000",
-        "endDateTime": "9999-12-31T00:00+0000"
+        "startDateTime" : "2022-11-10T02:58Z",
+        "endDateTime": "2100-02-10T02:58Z"
     }
 }
 ```
 
-| 값 | 타입 | 설명 |
+| 이름 | 타입 | 설명 |
 |---|---|---|
 | header.isSuccessful | Boolean | 성공 여부 |
 | header.resultCode | Integer | 결과 코드 |
@@ -87,7 +94,7 @@ GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}
 
 [Path Variables]
 
-| 값 |	타입 | 필수 여부 | 설명 |
+| 이름 | 타입 | 필수 여부 | 설명 |
 |---|---|---|---|
 | appKey | String | O | 서비스 Appkey(**서비스 관리** 탭에서 확인 가능) |
 | domain | String | O | 도메인 이름 |
@@ -113,7 +120,7 @@ GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}
 }
 ```
 
-| 값 | 타입 | 설명 |
+| 이름 | 타입 | 설명 |
 |---|---|---|
 | header.isSuccessful | Boolean | 성공 여부 |
 | header.resultCode | Integer | 결과 코드 |
@@ -140,7 +147,7 @@ GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}/qrcode
 
 [Path Variables]
 
-| 값 |	타입 | 필수 여부 | 설명 |
+| 이름 | 타입 | 필수 여부 | 설명 |
 |---|---|---|---|
 | appKey | String | O | 서비스 Appkey(**서비스 관리** 탭에서 확인 가능) |
 | domain | String | O | 도메인 이름 |
@@ -158,7 +165,7 @@ GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}/qrcode
 }
 ```
 
-| 값 | 타입 | 설명 |
+| 이름 | 타입 | 설명 |
 |---|---|---|
 | header.isSuccessful | Boolean | 성공 여부 |
 | header.resultCode | Integer | 실패 코드(0은 정상) |
