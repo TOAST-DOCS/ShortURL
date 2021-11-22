@@ -36,8 +36,8 @@ Content-Type: application/json
 | startDateTime | String | X | Date and time to start using shortURL |
 | endDateTime | String | X | Date and time to end the use of shortUrl |
 
-* When adding startDateTime and endDateTime, use the DateTimeFormatter.ISO_OFFSET_DATE_TIME format.
-* If startDateTime is not specified, it is set to the current time. If endDateTime is not specified, it is set to 3 months after startDateTime.
+* When adding **startDateTime** and **endDateTime**, use the **DateTimeFormatter.ISO_OFFSET_DATE_TIME** format.
+* If **startDateTime** is not specified, it is set to the current time. If **endDateTime** is not specified, it is set to 3 months after **startDateTime**.
 
 ```json
 {
