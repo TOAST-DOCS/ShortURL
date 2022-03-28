@@ -1,5 +1,10 @@
 ## Application Service > ShortURL > Release Notes
 
+### March 29, 2022
+
+#### Feature Updates
+* Changed so that the queryParameter feature can be enabled or disabled on a per-project basis.
+
 ### November 23, 2021
 
 #### Feature Updates
