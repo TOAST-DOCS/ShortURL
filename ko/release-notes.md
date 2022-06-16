@@ -3,7 +3,7 @@
 ### 2022. 06. 30.
 
 #### 기능 개선/변경
-* API 요청 도메인이 변경되었습니다.
+* API 엔드포인트의 도메인 이름이 `api-shorturl.cloud.toast.com`에서 `api-shorturl.nhncloudservice.com`로 변경되었습니다.
 * QR 코드 다운로드 기능이 추가되었습니다.
     * 생성된 단축 URL의 QR 코드 클릭 시 이미지를 다운로드할 수 있습니다.
 

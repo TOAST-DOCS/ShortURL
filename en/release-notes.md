@@ -1,5 +1,12 @@
 ## Application Service > ShortURL > Release Notes
 
+### June 30, 2022
+
+#### Feature Updates
+* Changed the domain name of the API endpoint from `api-shorturl.cloud.toast.com` to `api-shorturl.nhncloudservice.com`.
+* Added the QR code download function.
+    * You can download a QR code image by clicking the QR code of a generated shortened URL.
+
 ### March 29, 2022
 
 #### Feature Updates
