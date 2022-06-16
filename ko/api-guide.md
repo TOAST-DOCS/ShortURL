@@ -2,7 +2,7 @@
 
 ### 기본 정보
 ```http
-API Endpoint: https://api-shorturl.cloud.toast.com
+API Endpoint: https://api-shorturl.nhncloudservice.com
 ```
 
 ## 단축 URL
