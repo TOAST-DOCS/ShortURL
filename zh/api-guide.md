@@ -2,7 +2,7 @@
 
 ### Basic information
 ```http
-API Endpoint: https://api-shorturl.cloud.toast.com
+API Endpoint: https://api-shorturl.nhncloudservice.com
 ```
 
 ## Shortened URL

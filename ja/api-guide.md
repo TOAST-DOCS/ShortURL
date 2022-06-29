@@ -2,7 +2,7 @@
 
 ### 基本情報
 ```http
-API Endpoint: https://api-shorturl.cloud.toast.com
+API Endpoint: https://api-shorturl.nhncloudservice.com
 ```
 
 ## 短縮URL

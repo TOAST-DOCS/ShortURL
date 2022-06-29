@@ -1,5 +1,12 @@
 ## Application Service > ShortURL > リリースノート
 
+### 2022. 06. 30.
+
+#### 機能改善/変更
+* APIエンドポイントのドメイン名が`api-shorturl.cloud.toast.com`から`api-shorturl.nhncloudservice.com`に変更されました。
+* QRコードダウンロード機能が追加されました。
+    * 作成された短縮URLのQRコードをクリックするとイメージをダウンロードできます。
+
 ### 2022. 03. 29.
 
 #### 機能改善/変更
