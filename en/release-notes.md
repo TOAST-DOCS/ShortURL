@@ -1,6 +1,6 @@
 ## Application Service > ShortURL > Release Notes
 
-### 2022. 10. 25
+### 2022. 10. 25.
 
 #### 기능 개선/변경
 * shortUrl을 검색할 때 상태값을 더이상 활용할 수 없습니다.
