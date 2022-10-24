@@ -10,7 +10,7 @@
 
 ### View shortened URL
 - In the **View > URL** tab, you can check the added URL information.
-- Enter **Domain**, **Search Term** to search for a URL.
+- Enter **Domain** and **Search Term** to search for a URL.
 - Click **Copy** button to copy the link easily.
 - Click the **Disable** button to block the access to the shortened URL currently in use at any time.
 - Click the **Delete** button to delete a shortened URL no longer used.
