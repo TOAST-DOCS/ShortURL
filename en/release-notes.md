@@ -3,8 +3,8 @@
 ### October 25, 2022
 
 #### Feature Updates
-* Changed so that the status value cannot be used when searching a shortUrl.
-* Changed so that the text search condition is limited to the backHalf of the shortUrl when searching a shortUrl.
+* Changed so that the status value cannot be used when searching for a shortUrl.
+* Changed so that the text search condition is limited to the backHalf of the shortUrl when searching for a shortUrl.
 
 ### June 30, 2022
 
