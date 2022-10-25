@@ -1,5 +1,11 @@
 ## Application Service > ShortURL > Release Notes
 
+### 2022. 10. 25.
+
+#### 기능 개선/변경
+* shortUrl을 검색할 때 상태값을 사용하지 못하도록 변경하였습니다.
+* shortUrl을 검색할 때 텍스트 검색 조건을 shortUrl의 backHalf로 제한하도록 변경하였습니다.
+
 ### June 30, 2022
 
 #### Feature Updates
