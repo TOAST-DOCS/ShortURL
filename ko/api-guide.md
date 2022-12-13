@@ -81,6 +81,10 @@ Content-Type: application/json
 | body.startDateTime | String | 단축 URL 사용 시작 일시 |
 | body.endDateTime | String | 단축 URL 사용 종료 일시 |
 
+* 만들어진 shortUrl을 통해 originUrl을 접근할 경우 originUrl을 ASCII(7) 문자열로 변경하여 Location 헤더에 추가합니다.
+* 이때 + 문자는 별도의 인코딩 없이 그대로 쓰입니다.
+  * 예를 들어 `https://nhn.com?query=안+녕`은 `https://nhn.com?query=%EC%95%88+%EB%85%95`로 변환되며 `+`문자를 따로 `%2B`로 인코딩 하지 않습니다.
+
 ### 2. 검색
 - 단축 URL을 검색합니다.
 
