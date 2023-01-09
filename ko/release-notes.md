@@ -1,8 +1,8 @@
 ## Application Service > ShortURL > 릴리스 노트
 
 ### 2023. 01. 31.
-* originUrl에 한글 등의 ASCII(7)의 범위를 벗어나는 문자가 포함되었을 때 shortUrl의 리다이렉션이 제대로 되지 않던 문제를 해결했습니다.
-  * 만들어진 shortUrl을 통해 originUrl을 접근할 경우 originUrl을 ASCII(7) 문자열로 변경하여 Location 헤더에 추가합니다.
+* 원본 URL에 한글 등 ASCII(7) 인코딩 범위를 벗어나는 문자가 포함되었을 때 단축 URL의 리다이렉션이 제대로 되지 않는 문제를 해결했습니다.
+  * 만들어진 단축 URL을 통해 원본 URL을 접근할 경우 원본 URL을 ASCII(7) 문자열로 변경하여 Location 헤더에 추가합니다.
   * 이때 + 문자는 별도의 인코딩 없이 그대로 쓰입니다.
     * 예를 들어 `https://nhn.com?query=안+녕`은 `https://nhn.com?query=%EC%95%88+%EB%85%95`로 변환되며 `+`문자를 따로 `%2B`로 인코딩 하지 않습니다.
 
