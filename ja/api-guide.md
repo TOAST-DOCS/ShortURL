@@ -77,6 +77,10 @@ Content-Type: application/json
 | body.startAt | String | 短縮URLの使用開始日 |
 | body.endAt | String | 短縮URLの使用終了日 |
 
+* 作成された短縮URLを介して原本URLにアクセスする場合、原本URLをASCII(7)文字列に変更してLocationヘッダに追加します。
+* この時、+ 文字はエンコードされずそのまま使われます。
+  * たとえば、`https://nhn.com?query=안+녕`は`https://nhn.com?query=%EC%95%88+%EB%85%95`に変換され`+`文字を`%2B`にエンコードしません。
+
 ### 2. 検索
 - 短縮URLを検索します。
 
