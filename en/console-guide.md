@@ -6,6 +6,9 @@
 - In the **View > URL** tab, click the **Add URL** button to add a new shortened URL.
 - Select a full URL and domain to add a new shortened URL.
 - To create a URL you want, select **URL Type > Custom** and enter the URL you want.
+- When accessing the original URL through the shortened URL created, the original URL is converted into an ASCII (7) string and added to the Location header.
+- In this case, the character + is used without any additional encoding.
+    - For example, `https://nhn.com?query=안+녕` is converted to `https://nhn.com?query=%EC%95%88+%EB%85%95` and the character `+ ` is not encoded separately as `%2B`.
 - **Open Date** and **Expiry Date** indicates the period during which users can access through the added URL, which is useful when you want to block user access after a specific date and time.
 
 ### View shortened URL
