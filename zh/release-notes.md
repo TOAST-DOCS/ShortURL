@@ -1,10 +1,16 @@
 ## Application Service > ShortURL > Release Notes
 
-### 2022. 10. 25.
+### January 31, 2023
+* Fixed an issue where, when characters outside the ASCII(7) encoding range such as Korean are contained in the original URL, redirection of shortened URLs does not work properly.
+    * When accessing the original URL through the shortened URL created, the original URL is converted into an ASCII (7) string and added to the Location header.
+    * In this case, the character + is used without any additional encoding.
+        * For example, `https://nhn.com?query=안+녕` is converted to `https://nhn.com?query=%EC%95%88+%EB%85%95` and the character `+ ` is not encoded separately as `%2B`.
 
-#### 기능 개선/변경
-* shortUrl을 검색할 때 상태값을 사용하지 못하도록 변경하였습니다.
-* shortUrl을 검색할 때 텍스트 검색 조건을 shortUrl의 backHalf로 제한하도록 변경하였습니다.
+### October 25, 2022
+
+#### Feature Updates
+* Changed so that the status value cannot be used when searching for a shortUrl.
+* Changed so that the text search condition is limited to the backHalf of the shortUrl when searching for a shortUrl.
 
 ### June 30, 2022
 
