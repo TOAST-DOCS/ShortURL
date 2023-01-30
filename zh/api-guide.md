@@ -81,6 +81,10 @@ Content-Type: application/json
 | body.startDateTime | String | Date and time to start using the shortened URL |
 | body.endDateTime | String | Date and time to end the use of the shortened URL |
 
+* When accessing the original URL through the shortened URL created, the original URL is converted into an ASCII (7) string and added to the Location header.
+* In this case, the character + is used without any additional encoding.
+    * For example, `https://nhn.com?query=안+녕` is converted to `https://nhn.com?query=%EC%95%88+%EB%85%95` and the character `+ ` is not encoded separately as `%2B`.
+
 ### 2. Search
 - Search for a shortened URL.
 
