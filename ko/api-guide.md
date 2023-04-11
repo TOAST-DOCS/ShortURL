@@ -32,6 +32,7 @@ Content-Type: application/json
 | url | String | O | 원본 URL |
 | domain | String | X | 단축 URL에 사용할 도메인(없을 경우 nh.nu로 생성) |
 | backHalf | String | X | 단축 URL ID(https://nh.nu/example 에서 example을 가리키며, 없을 경우 랜덤 생성) |
+| description | String | X | 단축 URL 설명 |
 | campaigns | List<String> | X | 소속될 캠페인 ID 목록 |
 | startDateTime | String | X | shortUrl 사용 시작 일시 |
 | endDateTime | String | X | shortUrl 사용 만료 일시 |
@@ -45,6 +46,7 @@ Content-Type: application/json
    "domain": "nh,nu",
    "campaigns": [1,2],
    "backHalf": "example",
+   "description": "test",
    "startDateTime" : "2022-11-10T02:58Z",
    "endDateTime": "2100-02-10T02:58Z"
 }
@@ -63,6 +65,7 @@ Content-Type: application/json
         "originUrl": "https://nhn.com",
         "status": "ACTIVE",
         "backHalfType": "AUTO",
+        "description": "test",
         "startDateTime" : "2022-11-10T02:58Z",
         "endDateTime": "2100-02-10T02:58Z"
     }
@@ -78,6 +81,7 @@ Content-Type: application/json
 | body.originUrl | String | 원본 URL |
 | body.status | String | 단축 URL 상태 |
 | body.backHalfType | String | 단축 URL 생성 방식 |
+| body.description | String | 단축 URL 설명 |
 | body.startDateTime | String | 단축 URL 사용 시작 일시 |
 | body.endDateTime | String | 단축 URL 사용 종료 일시 |
 
@@ -118,6 +122,7 @@ GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}
         "originUrl": "https://nhn.com",
         "status": "ACTIVE",
         "backHalfType": "AUTO",
+        "description": "test",
         "startDateTime": "2021-03-26T03:35+0000",
         "endDateTime": "9999-12-31T00:00+0000"
     }
@@ -133,6 +138,7 @@ GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}
 | body.originUrl | String | 원본 URL |
 | body.status | String | 단축 URL 상태 |
 | body.backHalfType | String | 단축 URL 생성 방식 |
+| body.description | String | 단축 URL 설명 |
 | body.startDateTime | String | 단축 URL 사용 시작 일시 |
 | body.endDateTime | String | 단축 URL 사용 종료 일시 |
 
