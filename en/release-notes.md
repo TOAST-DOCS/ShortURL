@@ -1,6 +1,13 @@
 ## Application Service > ShortURL > Release Notes
 
+### April 25, 2023
+
+#### Feature Updates
+* Changed so that a short description (within 100 characters) can be enterred when creating or modifying a shortened URL.
+
 ### January 31, 2023
+
+#### Bug Fixes
 * Fixed an issue where, when characters outside the ASCII(7) encoding range such as Korean are contained in the original URL, redirection of shortened URLs does not work properly.
     * When accessing the original URL through the shortened URL created, the original URL is converted into an ASCII (7) string and added to the Location header.
     * In this case, the character + is used without any additional encoding.
