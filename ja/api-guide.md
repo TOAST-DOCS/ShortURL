@@ -29,6 +29,7 @@ Content-Type: application/json
 | url | String | O | 元のURL |
 | domain | String | X | 短縮URLに使用するドメイン(ない場合はnh.nuで作成) |
 | backHalf | String | X | 短縮URL ID(https://nh.nu/exampleではexampleを指す。ない場合はランダムに作成) |
+| description | String | X | 短縮URLの説明 |
 | campaigns | List<String> | X | 所属するキャンペーンIDリスト |
 | startDateTime | String | X | shortUrl使用開始日時 |
 | endDateTime | String | X | shortUrl使用終了日時 |
@@ -41,6 +42,7 @@ Content-Type: application/json
    "domain": "nh,nu",
    "campaigns": [0,1],
    "backHalf": "example",
+   "description": "test",
    "startDateTime" : "2022-11-10T02:58Z",
    "endDateTime": "2100-02-10T02:58Z"
 }
@@ -59,6 +61,7 @@ Content-Type: application/json
         "originUrl": "https://nhn.com",
         "status": "ACTIVE",
         "backHalfType": "AUTO",
+        "description": "test",
         "startDateTime" : "2022-11-10T02:58Z",
         "endDateTime": "2100-02-10T02:58Z"
     }
@@ -74,6 +77,7 @@ Content-Type: application/json
 | body.originUrl | String | 元のURL |
 | body.status | String | 短縮URLの状態 |
 | body.backHalfType | String | 短縮URLの作成方式 |
+| body.description | String | 短縮URLの説明 |
 | body.startAt | String | 短縮URLの使用開始日 |
 | body.endAt | String | 短縮URLの使用終了日 |
 
@@ -113,6 +117,7 @@ Content-Type: application/json
         "originUrl": "https://nhn.com",
         "status": "ACTIVE",
         "backHalfType": "AUTO",
+        "description": "test",
         "startAt": "2021-03-26T03:35+0000",
         "endAt": "9999-12-31T00:00+0000"
     }
@@ -128,6 +133,7 @@ Content-Type: application/json
 | body.originUrl | String | 元のURL |
 | body.status | String | 短縮URLの状態 |
 | body.backHalfType | String | 短縮URLの作成方式 |
+| body.description | String | 短縮URLの説明 |
 | body.startAt | String | 短縮URLの使用開始日 |
 | body.endAt | String | 短縮URLの使用終了日 |
 
