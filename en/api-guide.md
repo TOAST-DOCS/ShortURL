@@ -32,6 +32,7 @@ Content-Type: application/json
 | url | String | O | Full URL |
 | domain | String | X | The domain to use for shortened URL (created as nh.nu if not specified) |
 | backHalf | String | X | Shortened URL ID (Refers to `example` in https://nh.nu/example. Created randomly if not specified) |
+| description | String | X | Description of shortened URL |
 | campaigns | List<String> | X | List of campaign IDs to belong to |
 | startDateTime | String | X | Date and time to start using shortURL |
 | endDateTime | String | X | Date and time to end the use of shortUrl |
@@ -45,6 +46,7 @@ Content-Type: application/json
    "domain": "nh,nu",
    "campaigns": [1,2],
    "backHalf": "example",
+   "description": "test",
    "startDateTime" : "2022-11-10T02:58Z",
    "endDateTime": "2100-02-10T02:58Z"
 }
@@ -63,6 +65,7 @@ Content-Type: application/json
         "originUrl": "https://nhn.com",
         "status": "ACTIVE",
         "backHalfType": "AUTO",
+        "description": "test",
         "startDateTime" : "2022-11-10T02:58Z",
         "endDateTime": "2100-02-10T02:58Z"
     }
@@ -78,6 +81,7 @@ Content-Type: application/json
 | body.originUrl | String | Full URL |
 | body.status | String | Shortened URL status |
 | body.backHalfType | String | Method of creating the shortened URL |
+| body.description | String | Description of shortened URL |
 | body.startDateTime | String | Date and time to start using the shortened URL |
 | body.endDateTime | String | Date and time to end the use of the shortened URL |
 
@@ -118,6 +122,7 @@ GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}
         "originUrl": "https://nhn.com",
         "status": "ACTIVE",
         "backHalfType": "AUTO",
+        "description": "test",
         "startDateTime": "2021-03-26T03:35+0000",
         "endDateTime": "9999-12-31T00:00+0000"
     }
@@ -133,6 +138,7 @@ GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}
 | body.originUrl | String | Full URL |
 | body.status | String | Shortened URL status |
 | body.backHalfType | String | Method of creating the shortened URL |
+| body.description | String | Description of shortened URL |
 | body.startDateTime | String | Date and time to start using the shortened URL |
 | body.endDateTime | String | Date and time to end the use of the shortened URL |
 
