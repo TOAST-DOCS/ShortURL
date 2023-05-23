@@ -39,7 +39,7 @@ Content-Type: application/json
 ```json
 {
    "url": "https://nhn.com",
-   "domain": "nh,nu",
+   "domain": "nh.nu",
    "campaigns": [0,1],
    "backHalf": "example",
    "description": "test",
@@ -57,10 +57,10 @@ Content-Type: application/json
         "resultMessage": "SUCCESS"
     },
     "body": {
-        "shortUrl": "http://nh.nu/a",
+        "shortUrl": "http://nh.nu/example",
         "originUrl": "https://nhn.com",
         "status": "ACTIVE",
-        "backHalfType": "AUTO",
+        "backHalfType": "CUSTOM",
         "description": "test",
         "startDateTime" : "2022-11-10T02:58Z",
         "endDateTime": "2100-02-10T02:58Z"
