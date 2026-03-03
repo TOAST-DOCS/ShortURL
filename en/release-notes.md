@@ -1,5 +1,10 @@
 ## Application Service > ShortURL > Release Notes
 
+### March 10, 2026
+
+#### Feature Updates
+* Changed DNS record IP from `43.227.116.15` to `180.210.71.141`.
+
 ### April 25, 2023
 
 #### Feature Updates
