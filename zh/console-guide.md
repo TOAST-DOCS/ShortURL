@@ -37,7 +37,7 @@
 ## Domain
 
 ### Register DNS
-> IP: 43.227.116.15
+> IP: 180.210.71.141
 - **Domain** can be added only after the **Domain** is registered with the above IP of the DNS server.
     - **A record** is checked for its validation. Therefore, **A record** must be present.
 - **nslookup** command can be used to check if DNS is properly registered, as shown below.
@@ -45,7 +45,7 @@
 ```bash
 ...
 Name:   nh.nu
-Address: 43.227.116.15
+Address: 180.210.71.141
 ```
 
 ### Add domain
