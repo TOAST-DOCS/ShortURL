@@ -1,8 +1,13 @@
-## Application Service > ShortURL > 콘솔 사용 가이드
+<!-- pre-align:aligned sig=b1e01460c70d -->
 
-## URL
+<a id="application-service-shorturl-console-user-guide"></a>
+## Application Service > ShortURL > 콘솔 사용 가이드 { #application-service-shorturl-console-user-guide }
 
-### 단축 URL 추가
+<a id="url"></a>
+## URL { #url }
+
+<a id="add-shortened-url"></a>
+### 단축 URL 추가 { #add-shortened-url }
 - **조회 > URL** 탭에서 **URL 추가** 버튼을 클릭하여 새로운 단축 URL을 추가할 수 있습니다.
 - 원본 URL, 도메인을 선택하여 새로운 단축 URL을 추가합니다.
 - 원하는 URL을 생성하려면 **URL 종류 > 사용자 입력**을 선택하고 원하는 URL을 입력합니다.
@@ -11,30 +16,36 @@
     - 예를 들어 `https://nhn.com?query=안+녕`은 `https://nhn.com?query=%EC%95%88+%EB%85%95`로 변환되며 `+`문자를 따로 `%2B`로 인코딩 하지 않습니다.
 - **오픈 일시**와 **만료 일시**는 추가된 URL을 통하여 접속 가능한 기간으로, 특정 시간 이후에 접근을 원하지 않을 경우 유용합니다.
 
-### 단축 URL 조회
+<a id="view-shortened-url"></a>
+### 단축 URL 조회 { #view-shortened-url }
 - **조회 > URL** 탭에서 추가한 URL 정보를 확인할 수 있습니다.
 - **도메인**, **검색어**를 입력하여 URL을 검색할 수 있습니다.
 - **복사** 버튼을 클릭하여 손쉽게 링크를 복사할 수 있습니다.
 - **비활성화** 버튼을 클릭하여 언제든 사용하고 있는 단축 URL로의 접근을 막을 수 있습니다.
 - **삭제** 버튼을 클릭하여 더는 사용하지 않는 단축 URL을 삭제할 수 있습니다.
 
-## 캠페인
+<a id="campaign"></a>
+## 캠페인 { #campaign }
 
-### 캠페인 추가
+<a id="add-campaign"></a>
+### 캠페인 추가 { #add-campaign }
 - **조회 > 캠페인** 탭에서 **캠페인 추가** 버튼을 클릭하여 새로운 캠페인을 추가할 수 있습니다.
 - **캠페인**은 여러 개의 단축 URL을 포함할 수 있는 이벤트 그룹입니다.
 - **소속 URL**에 원하는 URL을 추가하여 관리할 수 있습니다.
 - **편집** 버튼을 클릭하여 **소속 URL**을 추가 또는 삭제할 수 있습니다.
 - **자세히** 버튼을 클릭하여 캠페인에 포함된 단축 URL 목록을 확인할 수 있습니다.
 
-### 캠페인 조회
+<a id="view-campaign"></a>
+### 캠페인 조회 { #view-campaign }
 - **조회 > 캠페인** 탭에서 **캠페인** 정보를 확인할 수 있습니다.
 - **도메인**, **상태** 그리고 **검색어**를 입력하여 캠페인을 검색할 수 있습니다.
 
 
-## 도메인
+<a id="domain"></a>
+## 도메인 { #domain }
 
-### DNS 등록
+<a id="register-dns"></a>
+### DNS 등록 { #register-dns }
 > IP: 180.210.71.141
 - **도메인**을 추가하려면 DNS 서버의 위의 IP로 **도메인**이 등록되어 있어야 합니다.
     - **A 레코드**를 보고 검증하기 때문에 **A 레코드**가 존재해야 합니다.
@@ -46,22 +57,26 @@ Name:   nh.nu
 Address: 180.210.71.141
 ```
 
-### 도메인 추가
+<a id="add-domain"></a>
+### 도메인 추가 { #add-domain }
 - **관리 > 도메인** 탭에서 **도메인 추가** 버튼을 클릭하여 사용자가 소유하고 있는 도메인을 추가할 수 있습니다.
 - **도메인**을 등록할 때 IP가 단축 URL 서버 IP인지 검증합니다.
 - **공개 범위**는 같은 조직 내의 여러 프로젝트에서 **도메인**을 공유해서 사용할 수 있도록 제공합니다.
 - **자세히** 버튼을 클릭하여 도메인의 자세한 정보를 확인할 수 있습니다.
 - 등록한 **도메인**은 다른 조직이나 프로젝트에서 재등록할 수 없습니다.
 
-### 도메인 조회
+<a id="view-domain"></a>
+### 도메인 조회 { #view-domain }
 - **관리 > 도메인** 탭에서 **도메인** 정보를 확인할 수 있습니다.
 - **자세히** 버튼을 클릭하여 자세한 도메인 정보를 확인할 수 있습니다.
 
 
 
-## 인증서
+<a id="certificate"></a>
+## 인증서 { #certificate }
 
-### 인증서 파일 형식
+<a id="certificate-file-format"></a>
+### 인증서 파일 형식 { #certificate-file-format }
 - **.pem** 형식의 인증서 파일만 지원합니다.
 - [passphrase](#passphrase-삭제)가 삭제된 인증서만 추가할 수 있습니다.
 - 파일에는 인증서(체인) 정보와 개인 키 정보가 포함되어 있습니다.
@@ -75,14 +90,16 @@ Address: 180.210.71.141
 -----END RSA PRIVATE KEY-----
 ```
 
-### passphrase 삭제
+<a id="delete-passphrase"></a>
+### passphrase 삭제 { #delete-passphrase }
 - passphrase는 다음 명령을 사용해 삭제할 수 있습니다.
 
 ```bash
 openssl rsa -in input.key -out output.key
 ```
 
-### 인증서 파일(.pem) 생성 방법
+<a id="how-to-create-a-certificate-file-pem"></a>
+### 인증서 파일(.pem) 생성 방법 { #how-to-create-a-certificate-file-pem }
 1. 인증서 정보를 **.pem** 형식으로 변환합니다.
 2. 인증서 체인과 개인 키를 포함하는 단일 **.pem** 파일을 생성합니다.
 
@@ -95,7 +112,8 @@ cat mydomain.crt mydomain.key root-ca-chain.pem > mydomain.pem
 - 루트/체인 인증서는 차이가 있을 수 있습니다.
 
 
-### 인증서 추가
+<a id="add-certificate"></a>
+### 인증서 추가 { #add-certificate }
 - **관리 > 인증서** 탭에서 **인증서 추가** 버튼을 클릭하여 사용자가 소유하고 있는 인증서를 추가할 수 있습니다.
 - **인증서**를 업로드하면 인증서를 검증하여 사용할 수 있는 인증서의 경우 자동으로 정보가 콘솔에 표시됩니다.
     - 이미 사용되고 있는 인증서는 사용할 수 없습니다.
@@ -104,11 +122,13 @@ cat mydomain.crt mydomain.key root-ca-chain.pem > mydomain.pem
 - **자세히** 버튼을 클릭하여 인증서의 자세한 정보를 확인할 수 있습니다.
 - 등록한 **인증서**는 다른 조직이나 프로젝트에서 재등록할 수 없습니다.
 
-### 인증서 조회
+<a id="view-certificate"></a>
+### 인증서 조회 { #view-certificate }
 - **관리 > 인증서** 탭에서 **인증서** 정보를 확인할 수 있습니다.
 - **자세히** 버튼을 클릭하여 자세한 인증서 정보를 확인할 수 있습니다.
 
-### 인증서 갱신
+<a id="renew-certificate"></a>
+### 인증서 갱신 { #renew-certificate }
 - **관리 > 인증서** 탭에서 각 인증서의 **편집** 버튼을 클릭하여 인증서를 갱신할 수 있습니다.
     - Common name(CN)이 동일한 인증서만 등록 가능합니다.
     - 만료일이 기존에 등록된 인증서의 만료일보다 더 후인 인증서만 등록 가능합니다.

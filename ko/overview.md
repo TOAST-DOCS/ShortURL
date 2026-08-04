@@ -1,10 +1,14 @@
-## Application Service > ShortURL > 개요
+<!-- pre-align:aligned sig=f267d3023a72 -->
+
+<a id="application-service-shorturl-overview"></a>
+## Application Service > ShortURL > 개요 { #application-service-shorturl-overview }
 
 ShortURL을 사용하면 글쓰기에 제한이 있는 다양한 환경에서 적은 글자 수로 웹 페이지 링크를 공유할 수 있습니다.
 손쉬운 연동을 위한 RESTful API를 제공합니다.
 
 
-## 주요 기능
+<a id="key-features"></a>
+## 주요 기능 { #key-features }
 - 사용자 정의 URL 생성
 - QR 코드 지원
 - 캠페인을 활용한 여러 개의 링크 리소스 관리

@@ -1,13 +1,19 @@
-## Application Service > ShortURL > API Guide
+<!-- pre-align:aligned sig=7351159b01ed -->
 
-### Basic information
+<a id="application-service-shorturl-api-guide"></a>
+## Application Service > ShortURL > API Guide { #application-service-shorturl-api-guide }
+
+<a id="basic-information"></a>
+### Basic information { #basic-information }
 ```http
 API Endpoint: https://api-shorturl.nhncloudservice.com
 ```
 
-## Shortened URL
+<a id="shortened-url"></a>
+## Shortened URL { #shortened-url }
 
-### 1. Create
+<a id="create"></a>
+### 1. Create { #create }
 - Create a shortened URL.
 
 [URL]
@@ -17,6 +23,7 @@ POST /open-api/v1.0/appkeys/{appKey}/urls
 Content-Type: application/json
 ```
 
+<a id="create-request"></a>
 #### Request
 
 [Path Variables]
@@ -52,6 +59,7 @@ Content-Type: application/json
 }
 ```
 
+<a id="create-response"></a>
 #### Response
 ```json
 {
@@ -89,7 +97,8 @@ Content-Type: application/json
 * In this case, the character + is used without any additional encoding.
     * For example, `https://nhn.com?query=안+녕` is converted to `https://nhn.com?query=%EC%95%88+%EB%85%95` and the character `+ ` is not encoded separately as `%2B`.
 
-### 2. Search
+<a id="search"></a>
+### 2. Search { #search }
 - Search for a shortened URL.
 
 [URL]
@@ -98,6 +107,7 @@ Content-Type: application/json
 GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}
 ```
 
+<a id="search-request"></a>
 #### Request
 
 [Path Variables]
@@ -109,6 +119,7 @@ GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}
 | backHalf | String | O | Shortened URL path ID |
 
 
+<a id="search-response"></a>
 #### Response
 ```json
 {
@@ -144,7 +155,8 @@ GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}
 
 
 
-### 3. Search for a QR code
+<a id="search-for-a-qr-code"></a>
+### 3. Search for a QR code { #search-for-a-qr-code }
 - Search for the QR code of a shortened URL.
 
 [URL]
@@ -153,6 +165,7 @@ GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}
 GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}/qrcode
 ```
 
+<a id="search-for-a-qr-code-request"></a>
 #### Request
 
 [Path Variables]
@@ -163,6 +176,7 @@ GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}/qrcode
 | domain | String | O | Domain name |
 | backHalf | String | O | Shortened URL path ID |
 
+<a id="search-for-a-qr-code-response"></a>
 #### Response
 ```json
 {
