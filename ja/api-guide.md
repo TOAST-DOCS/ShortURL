@@ -1,13 +1,19 @@
-## Application Service > ShortURL > APIガイド
+<!-- pre-align:aligned sig=7351159b01ed -->
 
-### 基本情報
+<a id="application-service-shorturl-api-guide"></a>
+## Application Service > ShortURL > APIガイド { #application-service-shorturl-api-guide }
+
+<a id="basic-information"></a>
+### 基本情報 { #basic-information }
 ```http
 API Endpoint: https://api-shorturl.nhncloudservice.com
 ```
 
-## 短縮URL
+<a id="shortened-url"></a>
+## 短縮URL { #shortened-url }
 
-### 1. 作成
+<a id="create"></a>
+### 1. 作成 { #create }
 - 短縮URLを作成します。
 
 [URL]
@@ -16,6 +22,7 @@ POST /open-api/v1.0/appkeys/{appkey}/urls
 Content-Type: application/json
 ```
 
+<a id="create-request"></a>
 #### リクエスト
 
 [Path Variables]
@@ -48,6 +55,7 @@ Content-Type: application/json
 }
 ```
 
+<a id="create-response"></a>
 #### レスポンス
 ```json
 {
@@ -85,7 +93,8 @@ Content-Type: application/json
 * この時、+ 文字はエンコードされずそのまま使われます。
   * たとえば、`https://nhn.com?query=안+녕`は`https://nhn.com?query=%EC%95%88+%EB%85%95`に変換され`+`文字を`%2B`にエンコードしません。
 
-### 2. 検索
+<a id="search"></a>
+### 2. 検索 { #search }
 - 短縮URLを検索します。
 
 [URL]
@@ -94,6 +103,7 @@ POST /open-api/v1.0/appkeys/{appkey}/domains/{domain}/urls/{backHalf}
 Content-Type: application/json
 ```
 
+<a id="search-request"></a>
 #### リクエスト
 
 [Path Variables]
@@ -104,6 +114,7 @@ Content-Type: application/json
 | backHalf | String | O | 短縮URL path ID |
 
 
+<a id="search-response"></a>
 #### レスポンス
 ```json
 {
@@ -139,7 +150,8 @@ Content-Type: application/json
 
 
 
-### 3. QRコード検索
+<a id="search-for-a-qr-code"></a>
+### 3. QRコード検索 { #search-for-a-qr-code }
 - 短縮URLを作成します。
 
 [URL]
@@ -148,6 +160,7 @@ POST /domains/{domain}/urls/{backHalf}/qrcode
 Content-Type: image/png
 ```
 
+<a id="search-for-a-qr-code-request"></a>
 #### リクエスト
 
 [Path Variables]
@@ -157,6 +170,7 @@ Content-Type: image/png
 | domain | String | O | ドメイン名 |
 | backHalf | String | O | 短縮URL path ID |
 
+<a id="search-for-a-qr-code-response"></a>
 #### レスポンス
 ```json
 {

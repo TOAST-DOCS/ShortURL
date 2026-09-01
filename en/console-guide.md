@@ -1,8 +1,13 @@
-## Application Service > ShortURL > Console User Guide
+<!-- pre-align:aligned sig=b1e01460c70d -->
 
-## URL
+<a id="application-service-shorturl-console-user-guide"></a>
+## Application Service > ShortURL > Console User Guide { #application-service-shorturl-console-user-guide }
 
-### Add shortened URL
+<a id="url"></a>
+## URL { #url }
+
+<a id="add-shortened-url"></a>
+### Add shortened URL { #add-shortened-url }
 - In the **View > URL** tab, click the **Add URL** button to add a new shortened URL.
 - Select a full URL and domain to add a new shortened URL.
 - To create a URL you want, select **URL Type > Custom** and enter the URL you want.
@@ -11,7 +16,8 @@
     - For example, `https://nhn.com?query=안+녕` is converted to `https://nhn.com?query=%EC%95%88+%EB%85%95` and the character `+ ` is not encoded separately as `%2B`.
 - **Open Date** and **Expiry Date** indicates the period during which users can access through the added URL, which is useful when you want to block user access after a specific date and time.
 
-### View shortened URL
+<a id="view-shortened-url"></a>
+### View shortened URL { #view-shortened-url }
 - In the **View > URL** tab, you can check the added URL information.
 - Enter **Domain** and **Search Term** to search for a URL.
 - Click **Copy** button to copy the link easily.
@@ -20,23 +26,28 @@
 
 
 
-## Campaign
+<a id="campaign"></a>
+## Campaign { #campaign }
 
-### Add campaign
+<a id="add-campaign"></a>
+### Add campaign { #add-campaign }
 - In the **View > Campaign** tab, click the **Add Campaign** button to add a new campaign.
 - **Campaign** is an event group that can include a multiple shortened URLs.
 - You can add a URL you want in **Affiliated URL** and manage it.
 - Click the **Edit** button to add or delete **Affiliated URL**.
 - Click the **More** button to see the list of the shortened URLs included in the campaign.
 
-### View campaign
+<a id="view-campaign"></a>
+### View campaign { #view-campaign }
 - In the **View > Campaign** tab, you can check the **Campaign** information.
 - Enter **Domain**, **Status**, and **Search Term** to search for a campaign.
 
 
-## Domain
+<a id="domain"></a>
+## Domain { #domain }
 
-### Register DNS
+<a id="register-dns"></a>
+### Register DNS { #register-dns }
 > IP: 180.210.71.141
 - **Domain** can be added only after the **Domain** is registered with the above IP of the DNS server.
     - **A record** is checked for its validation. Therefore, **A record** must be present.
@@ -48,22 +59,26 @@ Name:   nh.nu
 Address: 180.210.71.141
 ```
 
-### Add domain
+<a id="add-domain"></a>
+### Add domain { #add-domain }
 - In the **Manage > Domain** tab, click the **Add Domain** button to add a domain owned by users.
 - When registering a **Domain**, the service verifies whether the IP is a shortened URL server IP.
 - **Open Range** allows multiple projects within the same organization to share and use a **Domain**.
 - Click the **More** button to see more information on the domain.
 - The registered **Domain** cannot be re-registered in another organization or project.
 
-### View domain
+<a id="view-domain"></a>
+### View domain { #view-domain }
 - In the **Manage > Domain** tab, you can check the **Domain** information.
 - Click the **More** button to see more information on the domain.
 
 
 
-## Certificate
+<a id="certificate"></a>
+## Certificate { #certificate }
 
-### Certificate file format
+<a id="certificate-file-format"></a>
+### Certificate file format { #certificate-file-format }
 - Only certificate in **.pem** format is supported.
 - Only a certificate from which [passphrase](https://github.com/TOAST-DOCS/ShortURL/pull/1/files#passphrase-삭제) is deleted can be added.
 - The file contains a certificate (chain) information and private key information.
@@ -77,14 +92,16 @@ Address: 180.210.71.141
 -----END RSA PRIVATE KEY-----
 ```
 
-### Delete passphrase
+<a id="delete-passphrase"></a>
+### Delete passphrase { #delete-passphrase }
 - A passphrase can be deleted using the following command.
 
 ```bash
 openssl rsa -in input.key -out output.key
 ```
 
-### How to create a certificate file (.pem)
+<a id="how-to-create-a-certificate-file-pem"></a>
+### How to create a certificate file (.pem) { #how-to-create-a-certificate-file-pem }
 1. Convert the certificate information into **.pem** format.
 2. Create a single **.pem** file that includes a certificate chain and a private key.
 
@@ -97,7 +114,8 @@ cat mydomain.crt mydomain.key root-ca-chain.pem > mydomain.pem
 - Root/chain certificate could be a little different.
 
 
-### Add certificate
+<a id="add-certificate"></a>
+### Add certificate { #add-certificate }
 - -In the **Manage > Certificate** tab, click the **Add Certificate** button to add a certificate owned by user.
 - When a **Certificate** is uploaded, the certificate is validated. If the certificate is validated to be usable, the information is automatically displayed on the console.
     - You cannot use a certificate already in use.
@@ -106,11 +124,13 @@ cat mydomain.crt mydomain.key root-ca-chain.pem > mydomain.pem
 - Click the **More** button to see more information on the certificate.
 - The registered **Certificate** cannot be re-registered in another organization or project.
 
-### View certificate
+<a id="view-certificate"></a>
+### View certificate { #view-certificate }
 - In the **Manage > Certificate** tab, you can check the **Certificate** information.
 - Click the **More** button to see more information on the certificate.
 
-### Renew certificate
+<a id="renew-certificate"></a>
+### Renew certificate { #renew-certificate }
 - In the **Manage > Certificates** tab, you can renew a certificate by clicking the **Edit** button for each certificate.
     - Only a certificate with the same common name (CN) can be registered.
     - Only a certificate whose expiration date is later than the expiration date of previously registered certificate can be registered.
