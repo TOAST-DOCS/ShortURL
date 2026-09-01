@@ -1,10 +1,14 @@
-## Application Service > ShortURL > 概要
+<!-- pre-align:aligned sig=f267d3023a72 -->
+
+<a id="application-service-shorturl-overview"></a>
+## Application Service > ShortURL > 概要 { #application-service-shorturl-overview }
 
 ShortURLを使用すると、文字数に制限があるさまざまな環境で、少ない文字数でWebページリンクを共有できます。
 簡単に連動するためのRESTful APIを提供します。
 
 
-## 主な機能
+<a id="key-features"></a>
+## 主な機能 { #key-features }
 - ユーザー定義URLの作成
 - QRコードをサポート
 - キャンペーンを活用した複数のリンクリソース管理

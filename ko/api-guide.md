@@ -1,13 +1,19 @@
-## Application Service > ShortURL > API 가이드
+<!-- pre-align:aligned sig=7351159b01ed -->
 
-### 기본 정보
+<a id="application-service-shorturl-api-guide"></a>
+## Application Service > ShortURL > API 가이드 { #application-service-shorturl-api-guide }
+
+<a id="basic-information"></a>
+### 기본 정보 { #basic-information }
 ```http
 API Endpoint: https://api-shorturl.nhncloudservice.com
 ```
 
-## 단축 URL
+<a id="shortened-url"></a>
+## 단축 URL { #shortened-url }
 
-### 1. 생성
+<a id="create"></a>
+### 1. 생성 { #create }
 - 단축 URL을 생성합니다.
 
 [URL]
@@ -17,6 +23,7 @@ POST /open-api/v1.0/appkeys/{appKey}/urls
 Content-Type: application/json
 ```
 
+<a id="create-request"></a>
 #### 요청
 
 [Path Variables]
@@ -52,6 +59,7 @@ Content-Type: application/json
 }
 ```
 
+<a id="create-response"></a>
 #### 응답
 ```json
 {
@@ -89,7 +97,8 @@ Content-Type: application/json
 * 이때 + 문자는 별도의 인코딩 없이 그대로 쓰입니다.
   * 예를 들어 `https://nhn.com?query=안+녕`은 `https://nhn.com?query=%EC%95%88+%EB%85%95`로 변환되며 `+`문자를 따로 `%2B`로 인코딩 하지 않습니다.
 
-### 2. 검색
+<a id="search"></a>
+### 2. 검색 { #search }
 - 단축 URL을 검색합니다.
 
 [URL]
@@ -98,6 +107,7 @@ Content-Type: application/json
 GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}
 ```
 
+<a id="search-request"></a>
 #### 요청
 
 [Path Variables]
@@ -109,6 +119,7 @@ GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}
 | backHalf | String | O | 단축 URL path ID |
 
 
+<a id="search-response"></a>
 #### 응답
 ```json
 {
@@ -144,7 +155,8 @@ GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}
 
 
 
-### 3. QR 코드 검색
+<a id="search-for-a-qr-code"></a>
+### 3. QR 코드 검색 { #search-for-a-qr-code }
 - 단축 URL의 QR코드를 검색합니다.
 
 [URL]
@@ -153,6 +165,7 @@ GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}
 GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}/qrcode
 ```
 
+<a id="search-for-a-qr-code-request"></a>
 #### 요청
 
 [Path Variables]
@@ -163,6 +176,7 @@ GET /open-api/v1.0/appkeys/{appKey}/domains/{domain}/urls/{backHalf}/qrcode
 | domain | String | O | 도메인 이름 |
 | backHalf | String | O | 단축 URL path ID |
 
+<a id="search-for-a-qr-code-response"></a>
 #### 응답
 ```json
 {
