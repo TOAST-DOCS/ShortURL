@@ -77,7 +77,7 @@ Address: 180.210.71.141
 <a id="certificate-file-format"></a>
 ### 証明書ファイル形式 { #certificate-file-format }
 - **.pem**形式の証明書ファイルのみサポートします。
-- [passphrase](#passphrase-削除)が削除された証明書のみ追加できます。
+- [passphrase](#delete-passphrase)が削除された証明書のみ追加できます。
 - ファイルには証明書(チェーン)情報と、秘密鍵情報が含まれています。
 
 ```

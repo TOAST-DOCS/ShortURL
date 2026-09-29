@@ -78,7 +78,7 @@ Address: 180.210.71.141
 <a id="certificate-file-format"></a>
 ### 인증서 파일 형식 { #certificate-file-format }
 - **.pem** 형식의 인증서 파일만 지원합니다.
-- [passphrase](#passphrase-삭제)가 삭제된 인증서만 추가할 수 있습니다.
+- [passphrase](#delete-passphrase)가 삭제된 인증서만 추가할 수 있습니다.
 - 파일에는 인증서(체인) 정보와 개인 키 정보가 포함되어 있습니다.
 
 ```
