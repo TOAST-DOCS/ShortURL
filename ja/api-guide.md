@@ -26,9 +26,9 @@ Content-Type: application/json
 #### リクエスト
 
 [Path Variables]
-| 名前 |	タイプ | 必須かどうか | 説明 |
+| 名前 | タイプ | 必須かどうか | 説明 |
 |---|---|---|---|
-| appkey | String | O | サービスAppkey(**サービス管理**タブで確認可能) |
+| appKey | String | O | サービスAppkey(**サービス管理**タブで確認可能) |
 
 [Request Body]
 | 名前 |	タイプ | 必須かどうか | 説明 |
@@ -86,8 +86,8 @@ Content-Type: application/json
 | body.status | String | 短縮URLの状態 |
 | body.backHalfType | String | 短縮URLの作成方式 |
 | body.description | String | 短縮URLの説明 |
-| body.startAt | String | 短縮URLの使用開始日 |
-| body.endAt | String | 短縮URLの使用終了日 |
+| body.startDateTime | String | 短縮URLの使用開始日時 |
+| body.endDateTime | String | 短縮URLの使用終了日時 |
 
 * 作成された短縮URLを介して原本URLにアクセスする場合、原本URLをASCII(7)文字列に変更してLocationヘッダに追加します。
 * この時、+ 文字はエンコードされずそのまま使われます。
@@ -109,7 +109,7 @@ Content-Type: application/json
 [Path Variables]
 | 名前 |	タイプ | 必須かどうか | 説明 |
 |---|---|---|---|
-| appkey | String | O | サービスAppkey(**サービス管理**タブで確認可能) |
+| appKey | String | O | サービスAppkey(**サービス管理**タブで確認可能) |
 | domain | String | O | ドメイン名 |
 | backHalf | String | O | 短縮URL path ID |
 
@@ -145,8 +145,8 @@ Content-Type: application/json
 | body.status | String | 短縮URLの状態 |
 | body.backHalfType | String | 短縮URLの作成方式 |
 | body.description | String | 短縮URLの説明 |
-| body.startAt | String | 短縮URLの使用開始日 |
-| body.endAt | String | 短縮URLの使用終了日 |
+| body.startDateTime | String | 短縮URLの使用開始日時 |
+| body.endDateTime | String | 短縮URLの使用終了日時 |
 
 
 
@@ -164,9 +164,9 @@ Content-Type: image/png
 #### リクエスト
 
 [Path Variables]
-| 名前 |	タイプ | 必須かどうか | 説明 |
+| 名前 | タイプ | 必須かどうか | 説明 |
 |---|---|---|---|
-| appkey | String | O | サービスAppkey(**サービス管理**タブで確認可能) |
+| appKey | String | O | サービスAppkey(**サービス管理**タブで確認可能) |
 | domain | String | O | ドメイン名 |
 | backHalf | String | O | 短縮URL path ID |
 
