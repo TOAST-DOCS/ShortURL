@@ -6,12 +6,10 @@
 <a id="march-10-2026"></a>
 ### March 10, 2026 { #march-10-2026 }
 
-<!-- TODO: translate body -->
-
 <a id="march-10-2026-feature-updates"></a>
 #### Feature Updates
 
-<!-- TODO: translate body -->
+* The DNS registration IP has been changed from `43.227.116.15` to `180.210.71.141`.
 
 <a id="april-25-2023"></a>
 ### April 25, 2023 { #april-25-2023 }

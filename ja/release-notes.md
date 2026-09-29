@@ -6,12 +6,10 @@
 <a id="march-10-2026"></a>
 ### 2026. 03. 10. { #march-10-2026 }
 
-<!-- TODO: translate body -->
-
 <a id="march-10-2026-feature-updates"></a>
 #### 機能の改善/変更
 
-<!-- TODO: translate body -->
+* DNS登録IPが`43.227.116.15`から`180.210.71.141`に変更されました。
 
 <a id="april-25-2023"></a>
 ### 2023. 04. 25. { #april-25-2023 }
